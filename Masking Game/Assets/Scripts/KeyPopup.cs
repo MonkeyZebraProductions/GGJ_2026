@@ -15,10 +15,11 @@ public class KeyPopup : MonoBehaviour
         //Set Up Random Key Code
         chars = new string[36] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", 
             "1", "2", "3", "4", "5", "6", "7", "8", "9", "0" };
-        randomChar = chars[Random.Range(0, 35)];
+        int index = Random.Range(0, 35);
+        randomChar = chars[index];
 
-        keyCode = (KeyCode)System.Enum.Parse(typeof(KeyCode), randomChar);
-        
+        keyCode = (KeyCode)System.Enum.Parse(typeof(KeyCode), (index>=26 ? "Alpha": "") + randomChar);
+       
         keyPopupText = GetComponent<TextMeshProUGUI>();
         if (keyPopupText != null)
         {
