@@ -119,6 +119,61 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &168527973
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 168527974}
+  - component: {fileID: 168527975}
+  m_Layer: 0
+  m_Name: CharacterManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &168527974
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168527973}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7985477254955559930}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &168527975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168527973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bfc2e4fbe025c249ba6d079fa9d9cd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterSwapper
+  Narrator:
+    fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  Nacym:
+    fontAsset: {fileID: 11400000, guid: fec7aac255817b946ac782f82fa3c1d3, type: 2}
+  Mum:
+    fontAsset: {fileID: 11400000, guid: bc514200a105da3489557dce4ed728ba, type: 2}
+  Sulmira:
+    fontAsset: {fileID: 11400000, guid: 1d89db932690ab7498b4063b35b2059a, type: 2}
+  Lorien:
+    fontAsset: {fileID: 11400000, guid: 4f58eb8083752834b9967b2dbe4e49ef, type: 2}
+  LineText: {fileID: 2958262987260186131}
 --- !u!1 &266127451
 GameObject:
   m_ObjectHideFlags: 0
@@ -1433,7 +1488,7 @@ GameObject:
   - component: {fileID: 8309902629418111481}
   - component: {fileID: 8635081093982032366}
   m_Layer: 0
-  m_Name: Dialogue System
+  m_Name: DialogueSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1476,6 +1531,7 @@ Transform:
   - {fileID: 3859336323468213907}
   - {fileID: 3859336322909369793}
   - {fileID: 4747703130168559391}
+  - {fileID: 168527974}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!222 &8020628924808313908
