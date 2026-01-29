@@ -66,6 +66,9 @@ public class CharacterSwapper : MonoBehaviour
             case CharacterEnum.Nacym:
                 LineText.font = Nacym.fontAsset;
                 break;
+            case CharacterEnum.Mum:
+                LineText.font = Mum.fontAsset;
+                break;
             case CharacterEnum.Sulmira:
                 LineText.font = Sulmira.fontAsset;
                 break;
