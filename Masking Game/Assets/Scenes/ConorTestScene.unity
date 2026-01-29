@@ -433,21 +433,6 @@ MonoBehaviour:
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
   m_ScrollDeltaPerTick: 6
---- !u!114 &1482013106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7262066350799149444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a244666f79770448a84a45d5a4244f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ManualNodeMovement
-  AdvanceKey: 32
-  yarnProject: {fileID: 7545569452688597077, guid: a029006a56688d54287156cc529a7c8c, type: 3}
-  NodeToAdvanceTo: MissedResponce
 --- !u!114 &1713235070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1447,7 +1432,6 @@ GameObject:
   - component: {fileID: 7985477254955559930}
   - component: {fileID: 8309902629418111481}
   - component: {fileID: 8635081093982032366}
-  - component: {fileID: 1482013106}
   m_Layer: 0
   m_Name: Dialogue System
   m_TagString: Untagged
@@ -1888,7 +1872,7 @@ MonoBehaviour:
   - {fileID: 3859336322909369794}
   verboseLogging: 0
   autoStart: 1
-  startNode: TestDialog
+  startNode: Masking_Narrative_ScenarioA
   runSelectedOptionAsLine: 0
   allowOptionFallthrough: 1
   onNodeStart:

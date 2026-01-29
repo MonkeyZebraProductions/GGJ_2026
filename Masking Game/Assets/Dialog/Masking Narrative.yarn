@@ -1,0 +1,55 @@
+﻿title: Masking_Narrative_ScenarioA
+position: -5,20
+---
+Nacym (Internal): I ran my fingers over my mask and scanned the faces of the people surrounding me. 
+Nacym (Internal): I just wanted to go outside for a while, to catch my breath. But suddenly, all the smiles dropped. I got worried—what had happened? 
+Nacym (Internal): I forgot all about my need for air and focused on the conversation.
+
+Mum: Nacym where will you spend New Year’s Eve?
+-> Well. . . Sulmira and I were thinking maybe this year would be just the two of us and Astele . . .
+    <<jump Masking_Narrative_ScenarioA_Responce1>>
+-> I was actually going to propose hosting the dinner at my house!
+    <<jump Masking_Narrative_ScenarioA_Responce2>>
+-> Oh! And here I thought it was mandatory for me to host! Ha ha ha!
+    <<jump Masking_Narrative_ScenarioA_Responce1>>
+-> Fail Awnser #fallback
+    <<jump Masking_Narrative_ScenarioA_MissedResponce>>
+===
+
+title: Masking_Narrative_ScenarioA_MissedResponce
+position: -234,282
+---
+Mum: Dear? Deeeeaar? Is everything ok?
+//insert rest of text here
+<<jump Masking_Narrative_ScenarioB>>
+===
+
+title: Masking_Narrative_ScenarioA_Responce1
+position: 273,145
+---
+Narrator: Agh… the gazes. Oh, their eyes are fixed on you. You observe them playing hide-and-seek with your soul. You can’t afford it; you can’t stand them looking at you that way.
+Narrator: Y O  U      P U T   ON   T H  E       M    A     S   K    !!!
+Nacym:…But certainly, I would love to have you all here if you don’t have other plans!
+Narrator:Everyone seems content, but they would have preferred you proposed it earlier… they felt awkward. 
+Narrator:They would all prefer the usual routine to reappear, like Groundhog Day. Sulmira gives you a wistful smile.
+Sulmira: “Maybe next year!” She whispers, laughing and teasing you.
+Narrator: You feel bad for letting her down. You see your daughter with green ribbons on her little thorns and smile.
+
+<<jump Masking_Narrative_ScenarioB>>
+===
+
+title: Masking_Narrative_ScenarioA_Responce2
+position: 11,243
+---
+Narrator: Everyone seemed content, though there wasn’t a glimpse of excitement. It was like everybody expected this discussion to unfold this way. 
+Narrator: It was just Sulmira that gave you a sad smile. Your answer felt like a small, everyday betrayal. 
+Narrator: You saw young Astele on her arms; a small flame from the candle was burning on her little blouse, yet she slept peacefully. You put the fire out caressing her teeny-tiny horns.
+<<jump Masking_Narrative_ScenarioB>>
+===
+
+title: Masking_Narrative_ScenarioB
+position: -23,585
+---
+
+Scenario B Wahooo!!
+===
