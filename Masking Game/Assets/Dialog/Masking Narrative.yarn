@@ -1,6 +1,7 @@
 ﻿title: Masking_Narrative_ScenarioA
 position: -5,20
 ---
+<<twister_start "Dialogue System">>
 
 <<declare $maskHealth = 100>> //determines final monologue subract/add based on responces. Gamplay will reduce this too
 <<declare $redCount = 0>>
