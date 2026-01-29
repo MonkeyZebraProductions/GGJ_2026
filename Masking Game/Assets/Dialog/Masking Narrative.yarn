@@ -186,9 +186,9 @@ position: -7,1883
 ---
 //insert TextHere
 <<if $redCount > $greenCount || $maskHealth >50>>
-    //Monolog 1
+    //Monolog 2
 <<else>>
-    // Monolog 2
+    // Monolog 1
 <<endif>>
 
 ===
