@@ -43,13 +43,7 @@ public class CharacterSwapper : MonoBehaviour
         defaultFont = LineText.font;       
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    [YarnCommand("SwapCharacter")]
+    [YarnCommand("swapCharacter")]
     public void SwapCharacter(string characterName)
     {
         characterName = characterName.ToLower();
