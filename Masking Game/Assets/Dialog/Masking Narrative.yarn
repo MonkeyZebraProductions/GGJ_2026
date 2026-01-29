@@ -1,6 +1,9 @@
 ﻿title: Masking_Narrative_ScenarioA
 position: -5,20
 ---
+
+<<declare $maskHealth = 100>> //determines final monologue subract/add based on responces. Gamplay will reduce this too
+
 Nacym (Internal): I ran my fingers over my mask and scanned the faces of the people surrounding me. 
 Nacym (Internal): I just wanted to go outside for a while, to catch my breath. But suddenly, all the smiles dropped. I got worried—what had happened? 
 Nacym (Internal): I forgot all about my need for air and focused on the conversation.
@@ -19,8 +22,12 @@ Mum: Nacym where will you spend New Year’s Eve?
 title: Masking_Narrative_ScenarioA_MissedResponce
 position: -234,282
 ---
-Mum: Dear? Deeeeaar? Is everything ok?
-//insert rest of text here
+Narrator: You stay quiet. Everyone keeps looking at you waiting for an answer, anxious. But there's only awkward silence. 
+Narrator: You look at Sulmira, begging for help with your eyes. She lets out a sigh, and puts on a fake smile.
+
+Sulmira: We will be more than happy to have dinner with everyone this year!
+
+Narrator: You feel bad for letting her down. You see your daughter with green ribbons on her little thorns and smile.
 <<jump Masking_Narrative_ScenarioB>>
 ===
 
@@ -31,9 +38,9 @@ Narrator: Agh… the gazes. Oh, their eyes are fixed on you. You observe them pl
 Narrator: Y O  U      P U T   ON   T H  E       M    A     S   K    !!!
 Nacym:…But certainly, I would love to have you all here if you don't have other plans!
 Narrator:Everyone seems content, but they would have preferred you proposed it earlier… they felt awkward. 
-Narrator:They would all prefer the usual routine to reappear, like Groundhog Day. Sulmira gives you a wistful smile.
+Narrator:They would all prefer the usual routine to reappear, like Groundhog Day. Sulmira gives you a wistful smile as she jokingly whispers to you.
 
-Sulmira: “Maybe next year!” She whispers, laughing and teasing you.
+Sulmira: Maybe next year! 
 
 Narrator: You feel bad for letting her down. You see your daughter with green ribbons on her little thorns and smile.
 
@@ -57,13 +64,13 @@ Narrator: The Nightmare's gallop was shedding bright light on the paved road out
 Narrator: You could almost smell in the air that sth uncommon was going to happen. 
 Narrator: Sulmira kisses you good luck and you open the door… only to see your mum hugging a figure that was reminded you of someone…
 
-Mum: You remember Thorn?! I was thinking about what gift I should bring you this year and the idea crossed my mind and then you know ha ha ha …. 
+Mum: You remember Lorien?! I was thinking about what gift I should bring you this year and the idea crossed my mind and then you know ha ha ha …. 
 Mum: I couldn't help it! The two old friends together!
 
 Narrator: You look deep in his elitistic flirty eyes… it's your old crush, your adolescent fling, your first 1 week relationship ….
 Narrator: In other words you are fucked…
 
--> [i]Kiss wife in front of Thorn [/i] Oh, of course, come in! I would never turn anyone away on such a heartwarming day!
+-> [i]Kiss wife in front of Lorien [/i] Oh, of course, come in! I would never turn anyone away on such a heartwarming day!
     <<jump Masking_Narrative_ScenarioB_Responce1>>
 -> Ohh how are you?! It has been so many years… I am so happy to see you! Please come in! Mom this was an amazing idea!
     <<jump Masking_Narrative_ScenarioB_Responce2>>
@@ -75,7 +82,7 @@ Narrator: In other words you are fucked…
 title: Masking_Narrative_ScenarioB_MissedResponce
 position: -277,813
 ---
-Thorn: It doesn't take an expert to know when I'm not wanted.
+Lorien: It doesn't take an expert to know when I'm not wanted.
 //insert dialog here
 
 ===
@@ -86,25 +93,95 @@ position: -55,819
 Narrator: As he crosses the doorstep, YOU INTENSIFY THE FIREPLACE'S FLAMES, MAKING THEM SHAPE THE WORD
 Narrator: [b][i]“WELCOME~”[/b][/i]
 
-Narrator: Thorn looks awkwardly from your mother to you, and then to your wife and back again
+Narrator: Lorien looks awkwardly from your mother to you, and then to your wife and back again
 
-Thorn: Eh, yeah… I am really happy to see you, and thanks for, uh, having me. Your mother and I planned this to remember the good old times…
+Lorien: Eh, yeah… I am really happy to see you, and thanks for, uh, having me. Your mother and I planned this to remember the good old times…
 
 Narrator: He finishes speaking. The men sit around the fireplace, telling tales of glory and conquest past. 
-Narrator: After reeling from the sudden act of passion, your wife sighs heavily and starts preparing the table. Thorn had brought a set of Dragon chess with him . . .
+Narrator: After reeling from the sudden act of passion, your wife sighs heavily and starts preparing the table. Lorien had brought a set of Dragon chess with him . . .
 ===
 
 title: Masking_Narrative_ScenarioB_Responce2
 position: 163,822
 ---
-Narrator: Thorn hugs you for a sec and starts talking, 
+Narrator: Lorien hugs you for a sec and starts talking, 
 Narrator: and talking and talking and [b][i]taaaaalkkkkinnnnggggggggggggggggggggggggggggggggggggggg.[/b][/i] 
 Narrator: Despite your wife's best effort to interupt, your abundantly rambling aquaintance continues his deluge of irrelevant words.
 Narrator: Eventually, he stops.
 
-Thorn:  Haha, shouldn't we go inside? Keeping a guest on your doorstep too long… hah, it's like you don't even want me here!
+Lorien:  Haha, shouldn't we go inside? Keeping a guest on your doorstep too long… hah, it's like you don't even want me here!
 
 Narrator: He finishes speaking as the men of the house gather around the fireplace. 
 Narrator: Observing that group forming, your wife raises one of her eyebrows, the evil one, at you. You smile defensively.
+
+===
+
+title: Masking_Narrative_ScenarioC
+position: 163,822
+---
+//insert TextHere
+
+-> Option 1
+    //Child Responce 1
+-> Option 2
+    //Child Responce 2
+    -> Option 2.1
+        //Child Responce 2.1
+    -> Option 2.2
+        //Child Responce 2.2
+-> Fail Option #fallback
+    //Child Responce Fail
+
+<<jump Masking_Narrative_ScenarioD>>
+
+===
+
+title: Masking_Narrative_ScenarioD
+position: 163,822
+---
+//insert TextHere
+
+-> Option 1
+    //Uncle Responce 1
+-> Option 2
+    //Uncle Responce 2
+-> Fail Option #fallback
+    //Uncle Responce Fail
+
+Narrator: You ponder this responce, and your eventual reply
+
+-> Option 1
+    <<jump Masking_Narrative_ScenarioD_Responce1>>
+-> Option 2
+    <<jump Masking_Narrative_ScenarioD_Responce1>>
+-> Option 3
+    <<jump Masking_Narrative_ScenarioD_Responce2>>
+-> Fail Option #fallback
+    //Awkward Scilence
+    <<jump Masking_Narrative_ScenarioE>>
+
+===
+
+title: Masking_Narrative_ScenarioD_Responce1
+position: 163,822
+---
+//insert TextHere
+<<jump Masking_Narrative_ScenarioE>>
+
+===
+
+title: Masking_Narrative_ScenarioD_Responce2
+position: 163,822
+---
+//insert TextHere
+<<jump Masking_Narrative_ScenarioE>>
+
+===
+
+title: Masking_Narrative_ScenarioE
+position: 163,822
+---
+//insert TextHere
+
 
 ===
