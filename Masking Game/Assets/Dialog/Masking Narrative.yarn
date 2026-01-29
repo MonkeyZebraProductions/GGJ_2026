@@ -25,23 +25,25 @@ Mum: Dear? Deeeeaar? Is everything ok?
 ===
 
 title: Masking_Narrative_ScenarioA_Responce1
-position: 273,145
+position: 21,278
 ---
-Narrator: Agh… the gazes. Oh, their eyes are fixed on you. You observe them playing hide-and-seek with your soul. You can’t afford it; you can’t stand them looking at you that way.
+Narrator: Agh… the gazes. Oh, their eyes are fixed on you. You observe them playing hide-and-seek with your soul. You can't afford it; you can't stand them looking at you that way.
 Narrator: Y O  U      P U T   ON   T H  E       M    A     S   K    !!!
-Nacym:…But certainly, I would love to have you all here if you don’t have other plans!
+Nacym:…But certainly, I would love to have you all here if you don't have other plans!
 Narrator:Everyone seems content, but they would have preferred you proposed it earlier… they felt awkward. 
 Narrator:They would all prefer the usual routine to reappear, like Groundhog Day. Sulmira gives you a wistful smile.
+
 Sulmira: “Maybe next year!” She whispers, laughing and teasing you.
+
 Narrator: You feel bad for letting her down. You see your daughter with green ribbons on her little thorns and smile.
 
 <<jump Masking_Narrative_ScenarioB>>
 ===
 
 title: Masking_Narrative_ScenarioA_Responce2
-position: 11,243
+position: 253,271
 ---
-Narrator: Everyone seemed content, though there wasn’t a glimpse of excitement. It was like everybody expected this discussion to unfold this way. 
+Narrator: Everyone seemed content, though there wasn't a glimpse of excitement. It was like everybody expected this discussion to unfold this way. 
 Narrator: It was just Sulmira that gave you a sad smile. Your answer felt like a small, everyday betrayal. 
 Narrator: You saw young Astele on her arms; a small flame from the candle was burning on her little blouse, yet she slept peacefully. You put the fire out caressing her teeny-tiny horns.
 <<jump Masking_Narrative_ScenarioB>>
@@ -50,6 +52,59 @@ Narrator: You saw young Astele on her arms; a small flame from the candle was bu
 title: Masking_Narrative_ScenarioB
 position: -23,585
 ---
+Narrator: The day has come!
+Narrator: The Nightmare's gallop was shedding bright light on the paved road out of the house signaling your mothers arrival.
+Narrator: You could almost smell in the air that sth uncommon was going to happen. 
+Narrator: Sulmira kisses you good luck and you open the door… only to see your mum hugging a figure that was reminded you of someone…
 
-Scenario B Wahooo!!
+Mum: You remember Thorn?! I was thinking about what gift I should bring you this year and the idea crossed my mind and then you know ha ha ha …. 
+Mum: I couldn't help it! The two old friends together!
+
+Narrator: You look deep in his elitistic flirty eyes… it's your old crush, your adolescent fling, your first 1 week relationship ….
+Narrator: In other words you are fucked…
+
+-> [i]Kiss wife in front of Thorn [/i] Oh, of course, come in! I would never turn anyone away on such a heartwarming day!
+    <<jump Masking_Narrative_ScenarioB_Responce1>>
+-> Ohh how are you?! It has been so many years… I am so happy to see you! Please come in! Mom this was an amazing idea!
+    <<jump Masking_Narrative_ScenarioB_Responce2>>
+-> FailOption #fallback
+    <<jump Masking_Narrative_ScenarioB_MissedResponce>>
+
+===
+
+title: Masking_Narrative_ScenarioB_MissedResponce
+position: -277,813
+---
+Thorn: It doesn't take an expert to know when I'm not wanted.
+//insert dialog here
+
+===
+
+title: Masking_Narrative_ScenarioB_Responce1
+position: -55,819
+---
+Narrator: As he crosses the doorstep, YOU INTENSIFY THE FIREPLACE'S FLAMES, MAKING THEM SHAPE THE WORD
+Narrator: [b][i]“WELCOME~”[/b][/i]
+
+Narrator: Thorn looks awkwardly from your mother to you, and then to your wife and back again
+
+Thorn: Eh, yeah… I am really happy to see you, and thanks for, uh, having me. Your mother and I planned this to remember the good old times…
+
+Narrator: He finishes speaking. The men sit around the fireplace, telling tales of glory and conquest past. 
+Narrator: After reeling from the sudden act of passion, your wife sighs heavily and starts preparing the table. Thorn had brought a set of Dragon chess with him . . .
+===
+
+title: Masking_Narrative_ScenarioB_Responce2
+position: 163,822
+---
+Narrator: Thorn hugs you for a sec and starts talking, 
+Narrator: and talking and talking and [b][i]taaaaalkkkkinnnnggggggggggggggggggggggggggggggggggggggg.[/b][/i] 
+Narrator: Despite your wife's best effort to interupt, your abundantly rambling aquaintance continues his deluge of irrelevant words.
+Narrator: Eventually, he stops.
+
+Thorn:  Haha, shouldn't we go inside? Keeping a guest on your doorstep too long… hah, it's like you don't even want me here!
+
+Narrator: He finishes speaking as the men of the house gather around the fireplace. 
+Narrator: Observing that group forming, your wife raises one of her eyebrows, the evil one, at you. You smile defensively.
+
 ===
