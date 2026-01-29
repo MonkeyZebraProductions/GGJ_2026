@@ -3,12 +3,13 @@ position: -5,20
 ---
 
 <<declare $maskHealth = 100>> //determines final monologue subract/add based on responces. Gamplay will reduce this too
-
+<<declare $redCount = 0>>
+<<declare $greenCount = 0>>
 Nacym (Internal): I ran my fingers over my mask and scanned the faces of the people surrounding me. 
 Nacym (Internal): I just wanted to go outside for a while, to catch my breath. But suddenly, all the smiles dropped. I got worried—what had happened? 
 Nacym (Internal): I forgot all about my need for air and focused on the conversation.
 
-Mum: Nacym where will you spend New Year’s Eve?
+Mum: Nacym where will you spend New Year's Eve?
 -> Well. . . Sulmira and I were thinking maybe this year would be just the two of us and Astele . . .
     <<jump Masking_Narrative_ScenarioA_Responce1>>
 -> I was actually going to propose hosting the dinner at my house!
@@ -22,6 +23,7 @@ Mum: Nacym where will you spend New Year’s Eve?
 title: Masking_Narrative_ScenarioA_MissedResponce
 position: -234,282
 ---
+<<set $redCount to $redCount + 1>>
 Narrator: You stay quiet. Everyone keeps looking at you waiting for an answer, anxious. But there's only awkward silence. 
 Narrator: You look at Sulmira, begging for help with your eyes. She lets out a sigh, and puts on a fake smile.
 
@@ -80,15 +82,16 @@ Narrator: In other words you are fucked…
 ===
 
 title: Masking_Narrative_ScenarioB_MissedResponce
-position: -277,813
+position: -264,842
 ---
 Lorien: It doesn't take an expert to know when I'm not wanted.
 //insert dialog here
 
+<<jump Masking_Narrative_ScenarioC>>
 ===
 
 title: Masking_Narrative_ScenarioB_Responce1
-position: -55,819
+position: -16,863
 ---
 Narrator: As he crosses the doorstep, YOU INTENSIFY THE FIREPLACE'S FLAMES, MAKING THEM SHAPE THE WORD
 Narrator: [b][i]“WELCOME~”[/b][/i]
@@ -102,7 +105,7 @@ Narrator: After reeling from the sudden act of passion, your wife sighs heavily 
 ===
 
 title: Masking_Narrative_ScenarioB_Responce2
-position: 163,822
+position: 279,811
 ---
 Narrator: Lorien hugs you for a sec and starts talking, 
 Narrator: and talking and talking and [b][i]taaaaalkkkkinnnnggggggggggggggggggggggggggggggggggggggg.[/b][/i] 
@@ -117,7 +120,7 @@ Narrator: Observing that group forming, your wife raises one of her eyebrows, th
 ===
 
 title: Masking_Narrative_ScenarioC
-position: 163,822
+position: -107,1213
 ---
 //insert TextHere
 
@@ -137,7 +140,7 @@ position: 163,822
 ===
 
 title: Masking_Narrative_ScenarioD
-position: 163,822
+position: 15,1461
 ---
 //insert TextHere
 
@@ -163,7 +166,7 @@ Narrator: You ponder this responce, and your eventual reply
 ===
 
 title: Masking_Narrative_ScenarioD_Responce1
-position: 163,822
+position: -293,1636
 ---
 //insert TextHere
 <<jump Masking_Narrative_ScenarioE>>
@@ -171,7 +174,7 @@ position: 163,822
 ===
 
 title: Masking_Narrative_ScenarioD_Responce2
-position: 163,822
+position: 335,1584
 ---
 //insert TextHere
 <<jump Masking_Narrative_ScenarioE>>
@@ -179,9 +182,13 @@ position: 163,822
 ===
 
 title: Masking_Narrative_ScenarioE
-position: 163,822
+position: -7,1883
 ---
 //insert TextHere
-
+<<if $redCount > $greenCount || $maskHealth >50>>
+    //Monolog 1
+<<else>>
+    // Monolog 2
+<<endif>>
 
 ===
