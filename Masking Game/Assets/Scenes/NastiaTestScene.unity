@@ -523,7 +523,7 @@ MonoBehaviour:
   holdText: {fileID: 631473435}
   startCount: 1
   maxCount: 4
-  holdConfirmTime: 0.25
+  holdConfirmTime: 1
   stageGraceTime: 5
   mistakes: 0
   penaltyCooldown: 0.6
@@ -533,8 +533,6 @@ MonoBehaviour:
   yarnVars: {fileID: 0}
   yarnMistakesVar: $twister_mistakes
   yarnStageVar: $twister_stage
-  twistAtMax: 1
-  twistInterval: 1
 --- !u!1 &1200029820
 GameObject:
   m_ObjectHideFlags: 0
