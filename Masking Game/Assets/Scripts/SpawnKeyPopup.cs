@@ -9,14 +9,22 @@ public class SpawnKeyPopup : MonoBehaviour
     void Start()
     {
         canvas = GetComponent<Canvas>();
-        Instantiate(SpawnPrefab,canvas.transform);
-        RectTransform rectTransform = SpawnPrefab.GetComponent<RectTransform>();
-       rectTransform.localPosition = new Vector3(Random.Range(-MaxXOffset,MaxXOffset), Random.Range(-MaxYOffset, MaxYOffset), 0);
+        InvokeRepeating(nameof(KeyPopupSpawn),1f,2f);
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    void KeyPopupSpawn()
+    {
+        if (canvas != null)
+        {
+            Instantiate(SpawnPrefab, canvas.transform);
+            RectTransform rectTransform = SpawnPrefab.GetComponent<RectTransform>();
+            rectTransform.localPosition = new Vector3(Random.Range(-MaxXOffset, MaxXOffset), Random.Range(-MaxYOffset, MaxYOffset), 0);
+        }
     }
 }
