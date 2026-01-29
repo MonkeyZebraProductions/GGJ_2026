@@ -5,11 +5,12 @@ position: -5,20
 <<declare $maskHealth = 100>> //determines final monologue subract/add based on responces. Gamplay will reduce this too
 <<declare $redCount = 0>>
 <<declare $greenCount = 0>>
-Nacym (Internal): You run your fingers over my mask and scanned the faces of the people. 
-Nacym (Internal): You just wanted to go outside for a while, to catch your breath.
-Nacym (Internal): But suddenly, all the smiles dropped... What had happened? 
-Nacym (Internal): You forget about your need for air and focus on the conversation.
+Narrator: You run your fingers over my mask and scanned the faces of the people. 
+Narrator: You just wanted to go outside for a while, to catch your breath.
+Narrator: But suddenly, all the smiles dropped... What had happened? 
+Narrator: You forget about your need for air and focus on the conversation.
 
+<<swapCharacter CharacterManager Mum>>
 Mom: Nacym where will you spend New Year's Eve?
 -> “Well . . . Sulmira and I were thinking maybe this year would be just the two of us and Astele . . .”
     <<jump Masking_Narrative_ScenarioA_Responce1>>
@@ -25,12 +26,15 @@ title: Masking_Narrative_ScenarioA_MissedResponce
 position: -234,282
 ---
 <<set $redCount to $redCount + 1>>
+<<swapCharacter CharacterManager Narrator>>
 Narrator: You stay quiet. Everyone keeps looking at you waiting for an answer, anxious.  
 Narrator: But there’s only awkward silence. You look at Sulmira, begging for help with your eyes. 
 Narrator: She lets out a sigh, and puts on a fake smile.
 
+<<swapCharacter CharacterManager Sulmira>>
 Sulmira: “We will be more than happy to have dinner with everyone this year!”
 
+<<swapCharacter CharacterManager Narrator>>
 Narrator: You feel bad for letting her down. You see your daughter with green ribbons on her little thorns and smile.
 <<jump Masking_Narrative_ScenarioB>>
 ===
@@ -39,16 +43,23 @@ title: Masking_Narrative_ScenarioA_Responce1
 position: 21,278
 ---
 <<set $redCount to $redCount + 1>>
+<<swapCharacter CharacterManager Narrator>>
 Narrator: Agh… the gazes. Oh, their eyes are fixed on you. You can’t stand them looking at you that way.
 Narrator: Y O  U      P U T   ON   T H  E       M    A     S   K    !!!
+
+<<swapCharacter CharacterManager Nacym>>
 Nacym:“...But certainly, I would love to have you all here if you don’t have other plans!”
+
+<<swapCharacter CharacterManager Narrator>>
 Narrator: Everyone seems content, but maybe it would have been better if you proposed earlier...
 Narrator: They feel awkward.
 Narrator: Everyone misses the usual routine, like Groundhog Day. 
 Narrator: Sulmira gives you a wistful smile.
 
+<<swapCharacter CharacterManager Sulmira>>
 Sulmira: “Maybe next year!”
 
+<<swapCharacter CharacterManager Narrator>>
 Narrator: She whispers, teasing you.
 Narrator:You feel bad for letting her down. 
 Narrator: You see your daughter with green ribbons on her little thorns and smile.
@@ -60,6 +71,7 @@ title: Masking_Narrative_ScenarioA_Responce2
 position: 253,271
 ---
 <<set $greenCount to $greenCount + 1>>
+<<swapCharacter CharacterManager Narrator>>
 Narrator: Everyone seemed content, though there wasn’t a glimpse of excitement.
 Narrator: It was like everybody expected this discussion to unfold this way. 
 Narrator: Only Sulmira gives you a sad smile. Your answer felt like a small, everyday betrayal.  
@@ -71,22 +83,23 @@ Narrator: You put the fire out caressing her teeny-tiny horns.
 title: Masking_Narrative_ScenarioB
 position: -23,585
 ---
+<<swapCharacter CharacterManager Narrator>>
 Narrator: The day has come!
 Narrator: The Nightmare’s gallop lit the road, signaling your mother’s arrival.
 Narrator: You could almost smell in the air that something uncommon was about to happen.  
 Narrator: Sulmira kisses you good luck and you open the door...
 Narrator: Only to see your mom hugging a figure that reminded you of someone...
 
+<<swapCharacter CharacterManager Mum>>
 Mom: “You remember Lorien?! I was thinking about what gift I should bring you. And then you know ha ha ha...” 
 
+<<swapCharacter CharacterManager Narrator>>
 Narrator: You look deep into Lorien’s flirty eyes...
 Narrator: It’s your old crush, your teenage fling, your first 1-week relationship...
 Narrator: In other words, you are fucked.
 
+<<swapCharacter CharacterManager Mum>>
 Mom: “I couldn’t help it! The two old friends together!”
-
-Narrator: You look deep in his elitistic flirty eyes… it's your old crush, your adolescent fling, your first 1 week relationship ….
-Narrator: In other words you are fucked…
 
 -> “Oh, this is unexpected... But come in! I would never turn anyone away on such a heartwarming day!” 
     <<jump Masking_Narrative_ScenarioB_Responce1>>
@@ -101,15 +114,19 @@ title: Masking_Narrative_ScenarioB_MissedResponce
 position: -264,842
 ---
 <<set $greenCount to $greenCount + 1>>
+<<swapCharacter CharacterManager Narrator>>
 Narrator: Everyone stands there, waiting for you to say something, to greet them, or to even let them in.
 Narrator: Sulmira touches you lightly in your elbow, trying to prompt you to talk.
 Narrator: But you just can´t find the right words, you are too shocked.
 Narrator: Sulmira sighs and takes a step ahead.
 
+<<swapCharacter CharacterManager Sulmira>>
 Sulmira: "Uh, hi Lorien! It's been a while... Please, come in!"
 
+<<swapCharacter CharacterManager Lorien>>
 Lorien: “Eh, yeah... thanks for, uh, having me. Nacym’s mother invited me”
 
+<<swapCharacter CharacterManager Narrator>>
 Narrator: Sulmira lets them in and everyone gathers around the fireplace. 
 Narrator: Your wife looks dissapointed at you. You sigh and walk behind her.
 
@@ -120,16 +137,15 @@ title: Masking_Narrative_ScenarioB_Responce1
 position: -16,863
 ---
 <<set $redCount to $redCount + 1>>
-Narrator: Lorien looks awkwardly from your mother to you, and then to your wife and back again, before saying:
+<<swapCharacter CharacterManager Narrator>>
+Narrator: Lorien looks awkwardly from your mother to you, and then to your wife and back again.
 
-Lorien: “Eh, yeah... I am really happy to see you, and thanks for, uh, having me. Your mother planned this to remember the good old times...”
+<<swapCharacter CharacterManager Lorien>>
+Lorien: Eh, yeah… I am really happy to see you, and thanks for, uh, having me. Your mother and I planned this to remember the good times…
 
-Narrator: He finishes speaking, and everyone sit around the fireplace. You sigh heavily and start preparing the table. 
-
-Lorien: Eh, yeah… I am really happy to see you, and thanks for, uh, having me. Your mother and I planned this to remember the good old times…
-
+<<swapCharacter CharacterManager Narrator>>
 Narrator: He finishes speaking. The men sit around the fireplace, telling tales of glory and conquest past. 
-Narrator: Lorien had brought a set of Dragon chess with him...
+Narrator: Lorien had brought a set of Dragon Chess with him...
 
 <<jump Masking_Narrative_ScenarioC>>
 
@@ -139,12 +155,17 @@ title: Masking_Narrative_ScenarioB_Responce2
 position: 279,811
 ---
 <<set $greenCount to $greenCount + 1>>
-Narrator: Lorien hugs you for a sec and starts talking, and talking and talking and talking -even your wife tries to interrupt- and talking and talking and talking and 
-Narrator: and talking and talking and [b][i]taaaaalkkkkinnnnggggggggggggggggggggggggggggggggggggggg.[/b][/i] 
-Narrator: until he says:
 
+<<swapCharacter CharacterManager Narrator>>
+Narrator: Lorien hugs you for a sec and starts talking, and talking, and talking, and talking.
+Narrator: Your wife attempts to interrupt, but not even she can withstand his talking, and talking and talking,
+Narrator: andtalkingandtalkingand [b][i]taaaaalkkkkinnnnggggggggggggggggggggggggggggggggggggggg.[/b][/i] 
+Narrator: Eventually, his ramblings cease as he gives you a hearty chuckle.
+
+<<swapCharacter CharacterManager Lorien>>
 Lorien:  “Haha, shouldn’t we go inside? Keeping a guest on your doorstep too long… hah, it could be interpreted like the guest is unwanted!”
 
+<<swapCharacter CharacterManager Narrator>>
 Narrator: He finishes speaking and everyone gathers around the fireplace. 
 Narrator: Your wife raises one of her eyebrows —the evil one— at you. You smile defensively.
 
@@ -155,20 +176,20 @@ Narrator: Your wife raises one of her eyebrows —the evil one— at you. You sm
 title: Masking_Narrative_ScenarioC
 position: -119,1132
 ---
+<<swapCharacter CharacterManager Narrator>>
 Narrator: While setting the table, your wife asks for help. After a brief pause of surprise, everyone joins in. 
 Narrator: The table is ready, and you all sit on carved wooden chairs rising from the ground.
 Narrator: At that moment, your daughter throws her flip-flop at the bookcase with full force and laughs
 Narrator: She keeps throwing things at it, pretending it’s an owlbear.
 Narrator: It’s starting to get annoying.
 
+<<swapCharacter CharacterManager Mum>>
 Mom: “Nacym, aren´t you going to tell her something?”
 
 -> “Haha! Careful there, fierce owlbear hunter”
-    <<jump Masking_Narrative_ScenarioC_Responce1>>
-    
+    <<jump Masking_Narrative_ScenarioC_Responce1>>    
 -> “Hey, sweetheart. I know you’re playing, but that’s enough for now, okay? Let’s sit and eat together”
     <<jump Masking_Narrative_ScenarioC_Responce2>>
-
 -> Fail Option #fallback
     <<jump Masking_Narrative_ScenarioC_MissedResponce>>
 
@@ -177,6 +198,7 @@ title: Masking_Narrative_ScenarioC_MissedResponce
 position: -350,1361
 ---
 <<set $greenCount to $greenCount + 1>>
+<<swapCharacter CharacterManager Narrator>>
 Narrator: You stay silent. Your daughter looks at you, confused for a moment, then shrugs and sits down.
 Narrator: The room goes quiet.
 
@@ -188,6 +210,7 @@ title: Masking_Narrative_ScenarioC_Responce1
 position: -75,1345
 ---
 <<set $redCount to $redCount + 1>>
+<<swapCharacter CharacterManager Narrator>>
 Narrator: Encouraged, she throws another object at the bookcase and laughs even louder, eyes fixed on you.
 Narrator: No one intervenes. The behavior continues, and the irritation in the room grows heavier with each throw.
 
@@ -199,6 +222,7 @@ title: Masking_Narrative_ScenarioC_Responce2
 position: 206,1357
 ---
 <<set $greenCount to $greenCount + 1>>
+<<swapCharacter CharacterManager Narrator>>
 Narrator: She pauses, looks at the bookcase one last time, and lowers her hand. She doesn’t look sad, just a little disappointed.
 Narrator: The room goes quiet.
 
@@ -209,12 +233,15 @@ Narrator: The room goes quiet.
 title: Masking_Narrative_ScenarioD
 position: -28,1603
 ---
-Narrator: The plates are empty. The food is gone, and stomach enzymes are now happily at work breaking it down.
+<<swapCharacter CharacterManager Narrator>>
+Narrator: The plates are empty. The food is gone, and stomachs are now happily at work breaking it down.
 Narrator: Suddenly, your mom speaks up again.
+
+<<swapCharacter CharacterManager Mum>>
 Mom: “Nacym, darling, can I ask you a question?”
 -> “Yes mom, of course!”
     <<jump Masking_Narrative_ScenarioD_Responce1>>
--> “Oh, right, mom! Would you prefer extra stew? Or maybe… some meat pie for digestion, haha?”
+-> “Oh, right, mom! Would you prefer extra stew? Or maybe… some meat pie to soak it up, haha?”
     <<jump Masking_Narrative_ScenarioD_Responce2>>
 -> Fail Option #fallback
     <<jump Masking_Narrative_ScenarioD_MissedResponce>>
@@ -223,15 +250,20 @@ title: Masking_Narrative_ScenarioD_MissedResponce
 position: 16,1932
 ---
 <<set $greenCount to $greenCount + 1>>
+<<swapCharacter CharacterManager Narrator>>
 Narrator: The silence stretches.
 Narrator: Your mother fills it.
 
+<<swapCharacter CharacterManager Mum>>
 Mom: “Nacym, did you hear me?”
 
+<<swapCharacter CharacterManager Narrator>>
 Narrator: You stay quiet, looking intensely at the table. She nods slowly, as if confirming something to herself.
 
-Mom: “It’s rude to ignore your own mother, but I think you’ve always been good at that”
+<<swapCharacter CharacterManager Mum>>
+Mom: “It’s rude to ignore your own mother, but you’ve always been good at that”
 
+<<swapCharacter CharacterManager Narrator>>
 Narrator: No one laughs. No one disagrees.
 Narrator: The conversation moves on, but something has settled on your shoulders, heavy and unspoken.
 
@@ -243,10 +275,13 @@ title: Masking_Narrative_ScenarioD_Responce1
 position: -282,1969
 ---
 <<set $redCount to $redCount + 1>>
+<<swapCharacter CharacterManager Narrator>>
 Narrator: Your mother nods, as if encouraged by your answer.
 
+<<swapCharacter CharacterManager Mum>>
 Mom:  “When was the last time you did something just because you wanted to... not because it was expected of you?”
 
+<<swapCharacter CharacterManager Narrator>>
 Narrator: The table grows quiet.
 Narrator: She doesn’t push further. She doesn’t explain.
 Narrator: The question stays hanging in the air, unanswered, settling on your shoulders as the conversation slowly resumes.
@@ -259,17 +294,23 @@ title: Masking_Narrative_ScenarioD_Responce2
 position: 282,1922
 ---
 <<set $greenCount to $greenCount + 1>>
+<<swapCharacter CharacterManager Narrator>>
 Narrator: Your mother exhales softly and looks down at her plate.
 
+<<swapCharacter CharacterManager Mum>>
 Mom:  “You know… I don’t always say things the right way. I worry. That’s what mothers do.”
 
+<<swapCharacter CharacterManager Narrator>>
 Narrator:She looks up at you, a tired smile crossing her face.
 Narrator: There’s a pause. Then she tilts her head.
 
+<<swapCharacter CharacterManager Mum>>
 Mom: “Tell me something, Nacym.”
 
+<<swapCharacter CharacterManager Narrator>>
 Narrator: Her voice stays gentle.
 
+<<swapCharacter CharacterManager Mum>>
 Mom: “Are you actually happy with the life you chose... or is this just what you ended up with?”
 
 -> “I don’t know. Some days it feels right… and some days it just feels heavy.”
@@ -284,6 +325,7 @@ title: Masking_Narrative_ScenarioD_Responce2_1
 position: 684,2156
 ---
 <<set $redCount to $redCount + 1>>
+<<swapCharacter CharacterManager Narrator>>
 Narrator: The table stays quiet.
 Narrator: Your mother nods slowly, as if she expected that answer. The tension doesn’t vanish, but it eases.
 Narrator: Beside you, Sulmira shifts closer, her hand brushing yours under the table. She doesn’t say anything, but she stays.
@@ -296,6 +338,7 @@ title: Masking_Narrative_ScenarioD_Responce2_2
 position: 432,2142
 ---
 <<set $greenCount to $greenCount + 1>>
+<<swapCharacter CharacterManager Narrator>>
 Narrator:The words fall flat.
 Narrator: Your mother studies you for a moment, then looks away.
 Narrator: Sulmira glances at you, hesitates, and pulls her hand back to her lap.
@@ -306,6 +349,7 @@ Narrator: The conversation resumes, but the space between you feels wider than b
 title: Masking_Narrative_ScenarioE
 position: -26,2526
 ---
+<<swapCharacter CharacterManager Narrator>>
 Narrator: Your mother asks your daughter to smile. She does.
 Narrator: Your mother asks her to move her cute, flame-y legs and bring her scarf. She does.
 Narrator: After a while, silence.
@@ -319,49 +363,55 @@ Narrator: You look at each other, mask to mask.
 
 <<if $redCount > $greenCount || $maskHealth >50>>
 
-Narrator: You hug your daughter in a deep embrace.
-Nacym: [i]I imagined myself from a distance,[i]
-Nacym: [i]balancing masks instead of a face.[i]
-Nacym:[i]Each step meant choosing which one to show.[i]
-Nacym:[i]I leaned east, then west,[i]
-Nacym:[i]wherever the masks demanded.[i]
-Nacym:[i]I searched the others’ eyes,[i]
-Nacym:[i]adjusting my words to stay upright.[i]
-Nacym:[i]The farther I went,[i]
-Nacym:[i] the brighter the masks became,[i]
-Nacym:[i] the weaker my legs felt.[i]
-Nacym:[i]They kept pulling me forward[i]
-Nacym:[i]until I disappeared into the horizon,[i]
-Nacym:[i]never quite sure how far I’d gone.”[i]
+    Narrator: You hug your daughter in a deep embrace.
+
+    <<swapCharacter CharacterManager Nacym>>
+    Nacym: [i]I imagined myself from a distance,[/i]
+    Nacym: [i]balancing masks instead of a face.[/i]
+    Nacym:[i]Each step meant choosing which one to show.[/i]
+    Nacym:[i]I leaned east, then west,[/i]
+    Nacym:[i]wherever the masks demanded.[/i]
+    Nacym:[i]I searched the others’ eyes,[/i]
+    Nacym:[i]adjusting my words to stay upright.[/i]
+    Nacym:[i]The farther I went,[/i]
+    Nacym:[i] the brighter the masks became,[/i]
+    Nacym:[i] the weaker my legs felt.[/i]
+    Nacym:[i]They kept pulling me forward[/i]
+    Nacym:[i]until I disappeared into the horizon,[/i]
+    Nacym:[i]never quite sure how far I’d gone.”[/i]
 
 <<else>>
 
-Narrator: Tears burst into your eyes. 
-Narrator: Your daughter freezes more and sinks in doubt about what happened. 
-Narrator: Some seconds pass. Your wife comes to you and hugs you. 
-Narrator: Your daughter slowly comes and touches your horns. You laugh in between tears.
+    <<swapCharacter CharacterManager Narrator>>
+    Narrator: Tears burst into your eyes. 
+    Narrator: Your daughter freezes more and sinks in doubt about what happened. 
+    Narrator: Some seconds pass. Your wife comes to you and hugs you. 
+    Narrator: Your daughter slowly comes and touches your horns. You laugh in between tears.
 
-Astele: "Mom?"
-Nacym: "Yes, sweetheart?"
-Astele: “I didn’t know thatt   y o u   can cry”
+    Astele: "Mom?"
+    
+    <<swapCharacter CharacterManager Nacym>>
+    Nacym: "Yes, sweetheart?"
+    Astele: “I didn’t know thatt   y o u   can cry”
+    <<swapCharacter CharacterManager Narrator>>
+    Narrator: Your mask breaks.
 
-Narrator: Your mask breaks.
-
-Nacym:[i]I wasn’t ready for this.[i]
-Nacym:[i]I went out for a walk.[i]
-Nacym:[i]I imagined myself from a distance,[i]
-Nacym:[i]balancing broken masks instead of a face.[i]
-Nacym:[i]Each step meant choosing which broken mask to show.[i]
-Nacym:[i]I leaned east, then west,[i]
-Nacym:[i]wherever the broken masks demanded.[i]
-Nacym:[i]I searched the others’ eyes,[i]
-Nacym:[i]adjusting my words to stay upright.[i]
-Nacym:[i]The farther I went,[i]
-Nacym:[i]the brighter the broken masks became,[i]
-Nacym:[i]the weaker my legs felt.[i]
-Nacym:[i]They kept pulling me forward[i]
-Nacym:[i]until I disappeared into the horizon,[i]
-Nacym:[i]never quite sure how far I’d gone.[i]
+    <<swapCharacter CharacterManager Nacym>>
+    Nacym:[i]I wasn’t ready for this.[/i]
+    Nacym:[i]I went out for a walk.[/i]
+    Nacym:[i]I imagined myself from a distance,[/i]
+    Nacym:[i]balancing broken masks instead of a face.[/i]
+    Nacym:[i]Each step meant choosing which broken mask to show.[/i]
+    Nacym:[i]I leaned east, then west,[/i]
+    Nacym:[i]wherever the broken masks demanded.[/i]
+    Nacym:[i]I searched the others’ eyes,[/i]
+    Nacym:[i]adjusting my words to stay upright.[/i]
+    Nacym:[i]The farther I went,[/i]
+    Nacym:[i]the brighter the broken masks became,[/i]
+    Nacym:[i]the weaker my legs felt.[/i]
+    Nacym:[i]They kept pulling me forward[/i]
+    Nacym:[i]until I disappeared into the horizon,[/i]
+    Nacym:[i]never quite sure how far I’d gone.[/i]
 
 <<endif>>
 

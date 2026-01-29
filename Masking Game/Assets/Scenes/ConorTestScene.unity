@@ -1777,14 +1777,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: YarnSpinner.Unity.Samples.OptionsThatTimeout::Yarn.Unity.Samples.TimeoutOptionsView
   canvasGroup: {fileID: 8020628926380953690}
-  optionViewPrefab: {fileID: 2576261519635394347, guid: e605972137b0b4c1399ffb07beae9a9b, type: 3}
+  optionViewPrefab: {fileID: 2576261519635394347, guid: 4747a98e7284d9d488a9b84d4a680a7b, type: 3}
   timedBar: {fileID: 1200029824}
-  showsLastLine: 0
+  showsLastLine: 1
   lastLineText: {fileID: 8020628924808313909}
   lastLineContainer: {fileID: 0}
   lastLineCharacterNameText: {fileID: 0}
   lastLineCharacterNameContainer: {fileID: 0}
-  autoSelectDuration: 5
+  autoSelectDuration: 1
   fadeUpDuration: 0.25
   fadeDownDuration: 0.1
 --- !u!224 &8020628926591330728
