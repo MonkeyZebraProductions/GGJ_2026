@@ -6,6 +6,8 @@ position: -5,20
 <<declare $maskHealth = 100>> //determines final monologue subract/add based on responces. Gamplay will reduce this too
 <<declare $redCount = 0>>
 <<declare $greenCount = 0>>
+
+<<swapBG BGManager 0>>
 Narrator: You run your fingers over my mask and scanned the faces of the people. 
 Narrator: You just wanted to go outside for a while, to catch your breath.
 Narrator: But suddenly, all the smiles dropped... What had happened? 
@@ -84,6 +86,7 @@ Narrator: You put the fire out caressing her teeny-tiny horns.
 title: Masking_Narrative_ScenarioB
 position: -23,585
 ---
+<<swapBG BGManager 1>>
 <<swapCharacter CharacterManager Narrator>>
 Narrator: The day has come!
 Narrator: The Nightmare’s gallop lit the road, signaling your mother’s arrival.
@@ -177,6 +180,7 @@ Narrator: Your wife raises one of her eyebrows —the evil one— at you. You sm
 title: Masking_Narrative_ScenarioC
 position: -119,1132
 ---
+<<swapBG BGManager 2>>
 <<swapCharacter CharacterManager Narrator>>
 Narrator: While setting the table, your wife asks for help. After a brief pause of surprise, everyone joins in. 
 Narrator: The table is ready, and you all sit on carved wooden chairs rising from the ground.

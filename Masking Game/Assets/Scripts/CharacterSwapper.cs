@@ -11,7 +11,8 @@ enum CharacterEnum
     Nacym,
     Mum,
     Sulmira,
-    Lorien
+    Lorien,
+    Astelle
 }
 
 [Serializable]
@@ -33,6 +34,8 @@ public class CharacterSwapper : MonoBehaviour
     Character Sulmira;
     [SerializeField]
     Character Lorien;
+    [SerializeField]
+    Character Astelle;
 
     [SerializeField]
     TextMeshProUGUI LineText;

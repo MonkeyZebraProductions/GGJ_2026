@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 314f57f7595175c43b7ca22028111f36
+guid: daac4fd6a3ff4374694591f21364c761
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4536576009507892338
-    second: ui_dialogue1_0
+      213: 7986930919047559179
+    second: WhatsApp Image 2026-01-30 at 14.55.09_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -48,11 +48,11 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 161, y: 51, z: 166, w: 237}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -126,23 +126,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ui_dialogue1_0
+      name: WhatsApp Image 2026-01-30 at 14.55.09_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 3731
-        height: 602
+        width: 1600
+        height: 886
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 1874, y: 161, z: 1856, w: 441}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e8319b8b728da01c0800000000000000
-      internalID: -4536576009507892338
+      spriteID: b08f963ba5747de60800000000000000
+      internalID: 7986930919047559179
       vertices: []
       indices: 
       edges: []
@@ -151,8 +151,8 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    spriteID: 
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ui_dialogue1_0: -4536576009507892338
+      WhatsApp Image 2026-01-30 at 14.55.09_0: 7986930919047559179
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
