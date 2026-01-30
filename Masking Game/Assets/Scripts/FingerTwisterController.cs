@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Text;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using Yarn.Unity;
 
 public class FingerTwisterController : MonoBehaviour
@@ -24,10 +25,17 @@ public class FingerTwisterController : MonoBehaviour
     [SerializeField] private AudioClip missSfx;
     [SerializeField] private ParticleSystem missVfx;
 
-    [Header("Yarn (optional)")]
+    [Header("Yarn")]
     [SerializeField] private VariableStorageBehaviour yarnVars;
     [SerializeField] private string yarnMistakesVar = "$twister_mistakes";
     [SerializeField] private string yarnStageVar = "$twister_stage";
+
+    [Header("Gauge")]
+    [SerializeField] private Slider gauge;       
+    [SerializeField] private float fillPerSecond = 0.35f;
+    [SerializeField] private float drainPerSecond = 0.55f;
+    [SerializeField] private float startGaugeValue = 1f; 
+    private float gaugeValue;
 
     private readonly KeyCode[] pool = new[]
     {
@@ -47,6 +55,10 @@ public class FingerTwisterController : MonoBehaviour
 
     public void StartTwister(int start = 1, int max = 4)
     {
+        gauge.enabled = true;
+        gauge.gameObject.SetActive(true);
+        holdText.enabled = true;
+
         startCount = Mathf.Clamp(start, 1, 4);
         maxCount = Mathf.Clamp(max, startCount, 4);
 
@@ -62,12 +74,26 @@ public class FingerTwisterController : MonoBehaviour
         active = true;
         UpdateUI();
         SyncYarn();
+
+        gaugeValue = Mathf.Clamp01(startGaugeValue);
+        UpdateGaugeUI();
     }
+
+    private void UpdateGaugeUI()
+    {
+        if (gauge != null)
+            gauge.value = gaugeValue;
+    }
+
 
     public void StopTwister()
     {
+        pauseTimer = pauseTime;
         active = false;
         required.Clear();
+        gauge.gameObject.SetActive(false);
+        holdText.enabled = false;
+
         UpdateUI();
         SyncYarn();
     }
@@ -92,13 +118,12 @@ public class FingerTwisterController : MonoBehaviour
 
         if (allHeld)
         {
+            gaugeValue += fillPerSecond * Time.deltaTime;
+
             confirmTimer += Time.deltaTime;
 
             if (required.Count == maxCount)
-            {
                 StopTwister(); 
-                pauseTimer = pauseTime;
-            }
 
             if (confirmTimer >= holdConfirmTime && required.Count < maxCount)
             {
@@ -111,6 +136,8 @@ public class FingerTwisterController : MonoBehaviour
         }
         else
         {
+            gaugeValue -= drainPerSecond * Time.deltaTime;
+
             confirmTimer = 0f;
 
             if (graceTimer <= 0f && Time.time - lastPenaltyTime >= penaltyCooldown)
@@ -123,6 +150,9 @@ public class FingerTwisterController : MonoBehaviour
                 if (missVfx) missVfx.Play();
             }
         }
+
+        gaugeValue = Mathf.Clamp01(gaugeValue);
+        UpdateGaugeUI();
     }
 
     private bool AreAllRequiredHeld()
