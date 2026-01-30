@@ -18,6 +18,7 @@ enum CharacterEnum
 public struct Character
 {
     public TMP_FontAsset fontAsset;
+    public Sprite CharacterPoitrait;
 }
 
 public class CharacterSwapper : MonoBehaviour
@@ -35,12 +36,17 @@ public class CharacterSwapper : MonoBehaviour
 
     [SerializeField]
     TextMeshProUGUI LineText;
+    [SerializeField]
+    Image CharacterPoitraitContainer;
+    
+    private Animator characterAnimator;
 
     TMP_FontAsset defaultFont;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        defaultFont = LineText.font;       
+        defaultFont = LineText.font;
+        characterAnimator = CharacterPoitraitContainer.gameObject.GetComponent<Animator>();
     }
 
     [YarnCommand("swapCharacter")]
@@ -52,26 +58,47 @@ public class CharacterSwapper : MonoBehaviour
 
         Enum.TryParse<CharacterEnum>(characterName, true, out currentCharacter);
 
-        switch(currentCharacter)
+        if(LineText != null || CharacterPoitraitContainer != null)
         {
-            case CharacterEnum.Narrator:
-                LineText.font = Narrator.fontAsset;
-                break;
-            case CharacterEnum.Nacym:
-                LineText.font = Nacym.fontAsset;
-                break;
-            case CharacterEnum.Mum:
-                LineText.font = Mum.fontAsset;
-                break;
-            case CharacterEnum.Sulmira:
-                LineText.font = Sulmira.fontAsset;
-                break;
-            case CharacterEnum.Lorien:
-                LineText.font = Lorien.fontAsset;
-                break;
-            default:
-                LineText.font = defaultFont;
-                break;
+            switch(currentCharacter)
+            {
+                case CharacterEnum.Narrator:
+                    LineText.font = Narrator.fontAsset;
+                    MoveCharacterBack();
+                    break;
+                case CharacterEnum.Nacym:
+                    LineText.font = Nacym.fontAsset;
+                    MoveCharacterBack();
+                    break;
+                case CharacterEnum.Mum:
+                    LineText.font = Mum.fontAsset;
+                    MoveCharacterForward(Mum.CharacterPoitrait);
+                    break;
+                case CharacterEnum.Sulmira:
+                    LineText.font = Sulmira.fontAsset;
+                    MoveCharacterForward(Sulmira.CharacterPoitrait);
+                    break;
+                case CharacterEnum.Lorien:
+                    LineText.font = Lorien.fontAsset;
+                    MoveCharacterForward(Lorien.CharacterPoitrait);
+                    break;
+                default:
+                    LineText.font = defaultFont;
+                    break;
+            }
+
         }
+    }
+
+    void MoveCharacterForward(Sprite characterSprite)
+    {
+        CharacterPoitraitContainer.sprite = characterSprite;
+        characterAnimator.Play("MoveForward");
+        //CharacterPoitraitContainer.color = Color.white;
+    }
+
+    void MoveCharacterBack()
+    {
+        characterAnimator.Play("MoveBack");
     }
 }
