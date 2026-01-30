@@ -14,11 +14,9 @@ public class FingerTwisterController : MonoBehaviour
     [SerializeField] private int startCount = 1;
     [SerializeField] private int maxCount = 4;
     [SerializeField] private float holdConfirmTime = 0.25f; 
-    [SerializeField] private float stageGraceTime = 0.35f; 
     [SerializeField] private float pauseTime = 5f; 
     [Header("Penalty")]
     [SerializeField] private int mistakes = 0;
-    [SerializeField] private float penaltyCooldown = 0.6f;
 
     [Header("SFX/VFX")]
     [SerializeField] private AudioSource audioSource;
@@ -39,8 +37,8 @@ public class FingerTwisterController : MonoBehaviour
 
     private readonly KeyCode[] pool = new[]
     {
-        KeyCode.A, KeyCode.S, KeyCode.D, KeyCode.F,
         KeyCode.Q, KeyCode.W, KeyCode.E, KeyCode.R,
+        KeyCode.A, KeyCode.S, KeyCode.D, KeyCode.F,
         KeyCode.Z, KeyCode.X, KeyCode.C, KeyCode.V
     };
 
@@ -48,10 +46,7 @@ public class FingerTwisterController : MonoBehaviour
     private bool active;
 
     private float confirmTimer;
-    private float graceTimer;
-
     private float pauseTimer;
-    private float lastPenaltyTime;
 
     public void StartTwister(int start = 1, int max = 4)
     {
@@ -65,8 +60,6 @@ public class FingerTwisterController : MonoBehaviour
         required.Clear();
         mistakes = 0;
         confirmTimer = 0f;
-        graceTimer = stageGraceTime;
-        lastPenaltyTime = -999f;
 
         for (int i = 0; i < startCount; i++)
             AddRandomKey();
@@ -112,8 +105,6 @@ public class FingerTwisterController : MonoBehaviour
             return;
         }
 
-        graceTimer -= Time.deltaTime;
-
         bool allHeld = AreAllRequiredHeld();
 
         if (allHeld)
@@ -129,7 +120,6 @@ public class FingerTwisterController : MonoBehaviour
             {
                 confirmTimer = 0f;
                 AddRandomKey();
-                graceTimer = stageGraceTime;
                 UpdateUI();
                 SyncYarn();
             }
@@ -140,9 +130,8 @@ public class FingerTwisterController : MonoBehaviour
 
             confirmTimer = 0f;
 
-            if (graceTimer <= 0f && Time.time - lastPenaltyTime >= penaltyCooldown)
+            if (gaugeValue <= 0f)
             {
-                lastPenaltyTime = Time.time;
                 mistakes += 1;
                 SyncYarn();
 

@@ -784,11 +784,9 @@ MonoBehaviour:
   holdText: {fileID: 631473435}
   startCount: 1
   maxCount: 4
-  holdConfirmTime: 5
-  stageGraceTime: 5
+  holdConfirmTime: 7
   pauseTime: 5
   mistakes: 0
-  penaltyCooldown: 0
   audioSource: {fileID: 0}
   missSfx: {fileID: 0}
   missVfx: {fileID: 0}
