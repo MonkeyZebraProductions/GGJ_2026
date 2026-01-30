@@ -41,7 +41,7 @@ public class CharacterSwapper : MonoBehaviour
     TextMeshProUGUI LineText;
     [SerializeField]
     Image CharacterPoitraitContainer;
-    
+
     private Animator characterAnimator;
 
     TMP_FontAsset defaultFont;
@@ -61,9 +61,9 @@ public class CharacterSwapper : MonoBehaviour
 
         Enum.TryParse<CharacterEnum>(characterName, true, out currentCharacter);
 
-        if(LineText != null || CharacterPoitraitContainer != null)
+        if (LineText != null || CharacterPoitraitContainer != null)
         {
-            switch(currentCharacter)
+            switch (currentCharacter)
             {
                 case CharacterEnum.Narrator:
                     LineText.font = Narrator.fontAsset;
@@ -93,9 +93,23 @@ public class CharacterSwapper : MonoBehaviour
         }
     }
 
+    [YarnCommand("hideCharacter")]
+    void HideCharacter()
+    {
+        CharacterPoitraitContainer.enabled = false;
+    }
+
     void MoveCharacterForward(Sprite characterSprite)
     {
-        CharacterPoitraitContainer.sprite = characterSprite;
+        if(!CharacterPoitraitContainer.enabled) 
+        { 
+            CharacterPoitraitContainer.enabled=true; 
+        }
+        if (CharacterPoitraitContainer.sprite != characterSprite) 
+        { 
+            CharacterPoitraitContainer.sprite = characterSprite;
+        }
+        
         characterAnimator.Play("MoveForward");
         //CharacterPoitraitContainer.color = Color.white;
     }

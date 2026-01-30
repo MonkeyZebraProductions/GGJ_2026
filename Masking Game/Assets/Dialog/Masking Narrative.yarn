@@ -7,7 +7,7 @@ position: -5,20
 <<declare $redCount = 0>>
 <<declare $greenCount = 0>>
 
-<<swapBG BGManager 0>>
+//<<swapBG BGManager 0>>
 Narrator: You run your fingers over my mask and scanned the faces of the people. 
 Narrator: You just wanted to go outside for a while, to catch your breath.
 Narrator: But suddenly, all the smiles dropped... What had happened? 
@@ -87,6 +87,7 @@ title: Masking_Narrative_ScenarioB
 position: -23,585
 ---
 <<swapBG BGManager 1>>
+<<hideCharacter CharacterManager>>
 <<swapCharacter CharacterManager Narrator>>
 Narrator: The day has come!
 Narrator: The Nightmare’s gallop lit the road, signaling your mother’s arrival.
@@ -181,6 +182,7 @@ title: Masking_Narrative_ScenarioC
 position: -119,1132
 ---
 <<swapBG BGManager 2>>
+<<hideCharacter CharacterManager>>
 <<swapCharacter CharacterManager Narrator>>
 Narrator: While setting the table, your wife asks for help. After a brief pause of surprise, everyone joins in. 
 Narrator: The table is ready, and you all sit on carved wooden chairs rising from the ground.
@@ -238,6 +240,7 @@ Narrator: The room goes quiet.
 title: Masking_Narrative_ScenarioD
 position: -28,1603
 ---
+<<swapBG BGManager 3>>
 <<swapCharacter CharacterManager Narrator>>
 Narrator: The plates are empty. The food is gone, and stomachs are now happily at work breaking it down.
 Narrator: Suddenly, your mom speaks up again.
@@ -327,7 +330,7 @@ Mom: “Are you actually happy with the life you chose... or is this just what y
 
 ===
 title: Masking_Narrative_ScenarioD_Responce2_1
-position: 684,2156
+position: 497,2148
 ---
 <<set $redCount to $redCount + 1>>
 <<swapCharacter CharacterManager Narrator>>
@@ -340,7 +343,7 @@ Narrator: Someone eventually changes the subject. The question lingers.
 
 ===
 title: Masking_Narrative_ScenarioD_Responce2_2
-position: 432,2142
+position: 240,2122
 ---
 <<set $greenCount to $greenCount + 1>>
 <<swapCharacter CharacterManager Narrator>>
@@ -354,6 +357,7 @@ Narrator: The conversation resumes, but the space between you feels wider than b
 title: Masking_Narrative_ScenarioE
 position: -26,2526
 ---
+<<swapBG BGManager 4>>
 <<swapCharacter CharacterManager Narrator>>
 Narrator: Your mother asks your daughter to smile. She does.
 Narrator: Your mother asks her to move her cute, flame-y legs and bring her scarf. She does.

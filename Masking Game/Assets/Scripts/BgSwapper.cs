@@ -16,12 +16,6 @@ public class BgSwapper : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     [YarnCommand("swapBG")]
     public void SwapBg(int bgIndex)
     {
