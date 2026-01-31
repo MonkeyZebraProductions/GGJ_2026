@@ -405,12 +405,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 67011e90ba99dd24ead61112bfb242da, type: 3}
     - target: {fileID: 4291817896104515994, guid: 47147036a9c30cf429f7d7634022fb5c, type: 3}
+      propertyPath: pauseTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4291817896104515994, guid: 47147036a9c30cf429f7d7634022fb5c, type: 3}
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 700370548}
     - target: {fileID: 4291817896104515994, guid: 47147036a9c30cf429f7d7634022fb5c, type: 3}
       propertyPath: drainPerSecond
       value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4291817896104515994, guid: 47147036a9c30cf429f7d7634022fb5c, type: 3}
+      propertyPath: holdConfirmTime
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4291817896104515994, guid: 47147036a9c30cf429f7d7634022fb5c, type: 3}
       propertyPath: OnGaugeEmpty.m_PersistentCalls.m_Calls.Array.data[0].m_Target

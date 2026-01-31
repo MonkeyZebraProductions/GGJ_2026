@@ -62,14 +62,19 @@ public class FingerTwisterController : MonoBehaviour
         holdText.enabled = false;
     }
 
+    private void ShowUI()
+    {
+        gauge.gameObject.SetActive(true);
+        gauge.enabled = true;
+        holdText.enabled = true;
+    }
+
     public void StartTwister(int start = 1, int max = 4)
     {
         if (!active) return;
-
-        gauge.enabled = true;
+        
         gaugeEmptyTriggered = false;
-        gauge.gameObject.SetActive(true);
-        holdText.enabled = true;
+        ShowUI();
 
         startCount = Mathf.Clamp(start, 1, 4);
         maxCount = Mathf.Clamp(max, startCount, 4);
@@ -109,11 +114,12 @@ public class FingerTwisterController : MonoBehaviour
 
     private void Update()
     {
-        if (!active) 
+        if (pauseTimer > 0f) 
         {
             pauseTimer -= Time.deltaTime;
             if (pauseTimer <= 0f)
             {
+                active = true;
                 StartTwister(startCount, maxCount);
             }
             return;
