@@ -98,8 +98,8 @@ public class ManualNodeMovement : MonoBehaviour
         }
     }
 
-    [YarnCommand("goToMaingame")]
-    public void GoToMainGame()
+    [YarnCommand("MoveScene")]
+    public void MoveScene(string sceneName)
     {
         // Fade to black y luego cambiar escena
         if (fadePanelCanvasGroup != null)
@@ -125,13 +125,13 @@ public class ManualNodeMovement : MonoBehaviour
                 .OnUpdate(() => Debug.Log($"Fade en progreso, alpha: {fadePanelCanvasGroup.alpha}"))
                 .OnComplete(() => {
                     Debug.Log("Fade completado, cargando escena");
-                    SceneManager.LoadScene("MainGameScene");
+                    SceneManager.LoadScene(sceneName);
                 });
         }
         else
         {
             Debug.LogError("fadePanelCanvasGroup es null!");
-            SceneManager.LoadScene("MainGameScene");
+            SceneManager.LoadScene(sceneName);
         }
     }
 

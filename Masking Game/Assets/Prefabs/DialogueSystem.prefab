@@ -638,6 +638,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c6db311fe4a67b543ae39286d09d9ac8, type: 3}
   - {fileID: -1174887486711918030, guid: c093c0804d5e1f944afe66053fff5fc9, type: 3}
   - {fileID: 3269646996138629966, guid: 2b11f0176ca196b4cbc85af38a17e2fb, type: 3}
+  - {fileID: -4323034485975846994, guid: 39aae3aa17ba70d47aa421e64ae39108, type: 3}
+  - {fileID: -5160248144233441662, guid: 9bab7a70985d4e24e82ff22f2263e6c7, type: 3}
   bgImage: {fileID: 1305793614505263223}
 --- !u!1 &3561153151636736922
 GameObject:

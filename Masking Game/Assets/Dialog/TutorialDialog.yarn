@@ -16,10 +16,13 @@ Narrator: Well done. Your mask remains intact...for now. Enjoy your day, and try
 Sulmira: Nacym! How are you? It’s been a while.
 
 <<swapCharacter CharacterManager Narrator>>
-Narrator: Does your wife look a bit on edge today? She has that beautiful Elven twitch—raising her eyebrow every time she feels stressed. And look at your daughter playing with your long hair... she is pure sunshine! She is a good kid to everyone and for everyone; so consistent and kind. She took after her mother's adaptability—and yours—along with Sulmira’s wisdom.
+Narrator: Does your wife look a bit on edge today? She has that beautiful Elven twitch—raising her eyebrow every time she feels stressed. 
+Narrator: And look at your daughter playing with your long hair... she is pure sunshine! 
+Narrator: She is a good kid to everyone and for everyone; so consistent and kind. She took after her mother's adaptability—and yours—along with Sulmira’s wisdom.
 Narrator: I see you have your mask on... and when you don’t, you bind it to your right hand. 
 Narrator: That is the same hand that reaches out to greet others, the one that is always first to offer a hug, support, and comfort.
-Narrator: You are sitting in that chair in the family house, where everything always seems out of place. It feels as if every time you visit, someone moves the furniture by just a single centimeter. 
+Narrator: You are sitting in that chair in the family house, where everything always seems out of place. 
+Narrator: It feels as if every time you visit, someone moves the furniture by just a single centimeter. 
 Narrator: You never feel truly comfortable, yet you always feel like you 'shouldn’t' feel that way...
-<<goToMaingame DialogueSystem>>
+<<MoveScene DialogueSystem MainGameScene>>
 ===
