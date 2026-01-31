@@ -103,7 +103,7 @@ public class ManualNodeMovement : MonoBehaviour
     IEnumerator RestartDialog()
     {
         dialogueRunner.Stop();
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         dialogueRunner.StartDialogue(NodeToAdvanceTo);
     }
 

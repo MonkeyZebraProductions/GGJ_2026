@@ -75,7 +75,7 @@ public class Mask : MonoBehaviour
             return;
         }
         //When Health is low
-        if (currentMaskHealth<=maskHealthCheckpointValue)
+        if (currentMaskHealth<=maskHealthCheckpointValue || currentMaskHealth <= maskHealthLoss)
         {
             if (maskAudioSource != null && !maskAudioSource.isPlaying)
             {
@@ -89,8 +89,8 @@ public class Mask : MonoBehaviour
         {
             if(currentMaskHealth<=maxMaskHealth-maskHealthCheckpointValue*maskIndex)
             {
-                maskImage.sprite = maskSprites[maskIndex];
                 maskIndex++;
+                maskImage.sprite = maskSprites[maskIndex];
             }
         }
     }
