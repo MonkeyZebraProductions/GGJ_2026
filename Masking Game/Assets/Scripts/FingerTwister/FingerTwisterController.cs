@@ -16,6 +16,7 @@ public class FingerTwisterController : MonoBehaviour
     public int startCount = 1;
     public int maxCount = 4;
     [SerializeField] private float holdConfirmTime = 5f; 
+    [SerializeField] private float randomHoldConfirm = 5f; 
     [SerializeField] private float pauseTime = 5f;
     [SerializeField] public UnityEvent OnGuageFull;
 
@@ -44,7 +45,7 @@ public class FingerTwisterController : MonoBehaviour
     };
 
     private readonly List<KeyCode> required = new();
-    private bool active;
+    public bool active;
 
     private float confirmTimer;
     private float pauseTimer;
@@ -63,6 +64,8 @@ public class FingerTwisterController : MonoBehaviour
 
     public void StartTwister(int start = 1, int max = 4)
     {
+        if (!active) return;
+
         gauge.enabled = true;
         gaugeEmptyTriggered = false;
         gauge.gameObject.SetActive(true);
@@ -131,7 +134,7 @@ public class FingerTwisterController : MonoBehaviour
 
             }
 
-            if (confirmTimer >= holdConfirmTime + UnityEngine.Random.Range(0, 5) && required.Count < maxCount)
+            if (confirmTimer >= holdConfirmTime + UnityEngine.Random.Range(0, randomHoldConfirm) && required.Count < maxCount)
             {
                 confirmTimer = 0f;
                 AddRandomKey();
