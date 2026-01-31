@@ -21,6 +21,10 @@ public class Mask : MonoBehaviour
     [SerializeField]
     private ManualNodeMovement NodeMovement;
 
+    [Header("UI Image")]
+    [SerializeField]
+    private Image uiImageToActivate;
+
     [Header("Yarn (optional)")]
     [SerializeField] private VariableStorageBehaviour yarnVars;
     [SerializeField] private string yarnMaskVarName = "$maskHealth";
@@ -37,6 +41,15 @@ public class Mask : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void ActivateUIImage()
+    {
+        if (uiImageToActivate != null)
+        {
+            uiImageToActivate.gameObject.SetActive(true);
+            Debug.Log("UI Image Activated");
+        }
     }
 
     public void LoseMaskHealth(int maskHealthLoss)
@@ -62,8 +75,11 @@ public class Mask : MonoBehaviour
             if (maskAudioSource != null && !maskAudioSource.isPlaying)
             {
                 maskAudioSource.Play();
+                ActivateUIImage();
             }
         }
+
+
         if (maskSprites != null && maskImage != null)
         {
             if(currentMaskHealth<=maxMaskHealth-maskHealthCheckpointValue*maskIndex)
