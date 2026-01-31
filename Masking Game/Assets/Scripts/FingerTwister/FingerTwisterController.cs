@@ -1,8 +1,10 @@
+using System;
 using System.Collections.Generic;
 using System.Text;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 using Yarn.Unity;
 
 public class FingerTwisterController : MonoBehaviour
@@ -18,15 +20,9 @@ public class FingerTwisterController : MonoBehaviour
     [Header("Penalty")]
     [SerializeField] private int mistakes = 0;
 
-    [Header("SFX/VFX")]
+    [Header("SFX")]
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip missSfx;
-    [SerializeField] private ParticleSystem missVfx;
-
-    [Header("Yarn")]
-    [SerializeField] private VariableStorageBehaviour yarnVars;
-    [SerializeField] private string yarnMistakesVar = "$twister_mistakes";
-    [SerializeField] private string yarnStageVar = "$twister_stage";
 
     [Header("Gauge")]
     [SerializeField] private Slider gauge;       
@@ -34,6 +30,7 @@ public class FingerTwisterController : MonoBehaviour
     [SerializeField] private float drainPerSecond = 0.55f;
     [SerializeField] private float startGaugeValue = 1f; 
     private float gaugeValue;
+    private bool gaugeEmptyTriggered;
 
     private readonly KeyCode[] pool = new[]
     {
@@ -51,6 +48,7 @@ public class FingerTwisterController : MonoBehaviour
     public void StartTwister(int start = 1, int max = 4)
     {
         gauge.enabled = true;
+        gaugeEmptyTriggered = false;
         gauge.gameObject.SetActive(true);
         holdText.enabled = true;
 
@@ -66,7 +64,6 @@ public class FingerTwisterController : MonoBehaviour
 
         active = true;
         UpdateUI();
-        SyncYarn();
 
         gaugeValue = Mathf.Clamp01(startGaugeValue);
         UpdateGaugeUI();
@@ -88,7 +85,6 @@ public class FingerTwisterController : MonoBehaviour
         holdText.enabled = false;
 
         UpdateUI();
-        SyncYarn();
     }
 
     public void SetMaxCount(int max) => maxCount = Mathf.Clamp(max, 1, 4);
@@ -121,7 +117,6 @@ public class FingerTwisterController : MonoBehaviour
                 confirmTimer = 0f;
                 AddRandomKey();
                 UpdateUI();
-                SyncYarn();
             }
         }
         else
@@ -133,10 +128,11 @@ public class FingerTwisterController : MonoBehaviour
             if (gaugeValue <= 0f)
             {
                 mistakes += 1;
-                SyncYarn();
-
+                gaugeValue = 0f;          
+                TriggerGaugeEmpty();      
                 if (missSfx && audioSource) audioSource.PlayOneShot(missSfx);
-                if (missVfx) missVfx.Play();
+
+                return;
             }
         }
 
@@ -159,7 +155,7 @@ public class FingerTwisterController : MonoBehaviour
         int safety = 100;
         while (safety-- > 0)
         {
-            var k = pool[Random.Range(0, pool.Length)];
+            var k = pool[UnityEngine.Random.Range(0, pool.Length)];
             if (!required.Contains(k))
             {
                 required.Add(k);
@@ -195,11 +191,19 @@ public class FingerTwisterController : MonoBehaviour
         return key.ToString();
     }
 
-    private void SyncYarn()
+    private void TriggerGaugeEmpty()
     {
-        if (yarnVars == null) return;
+        if (gaugeEmptyTriggered) return;
 
-        yarnVars.SetValue(yarnMistakesVar, (float)mistakes);
-        yarnVars.SetValue(yarnStageVar, (float)required.Count);
+        gaugeEmptyTriggered = true;
+        mistakes += 1;
+
+        if (missSfx && audioSource) audioSource.PlayOneShot(missSfx);
+            OnGaugeEmpty?.Invoke(this);
+
+        StopTwister();
     }
+
+     public event Action<FingerTwisterController> OnGaugeEmpty;
+
 }
