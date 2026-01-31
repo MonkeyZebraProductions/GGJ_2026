@@ -14,6 +14,7 @@ Narrator: But suddenly, all the smiles dropped... What had happened?
 Narrator: You forget about your need for air and focus on the conversation.
 
 <<swapCharacter CharacterManager Mum>>
+//<<twister_start FingerTwister>>
 Mom: Nacym where will you spend New Year's Eve?
 -> “Well . . . Sulmira and I were thinking maybe this year would be just the two of us and Astele . . .”
     <<jump Masking_Narrative_ScenarioA_Responce1>>
@@ -365,13 +366,14 @@ Narrator: Your mother asks her to move her cute, flame-y legs and bring her scar
 Narrator: After a while, silence.
 Narrator: Everyone finally leaves. You say goodbye to each of them.
 Narrator: Quiet again. Shhh.
+<<swapCharacter CharacterManager Astelle>>
 Narrator: Your daughter looks at you, clearly waiting for something, for having behaved so well.
 Narrator: From halfway up the stairs, your wife watches the scene.
 Narrator: Your daughter’s eyes lock onto yours.
 Narrator: Your soul follows.
 Narrator: You look at each other, mask to mask.
 
-<<if $redCount > $greenCount || $maskHealth >50>>
+<<if $redCount > $greenCount || $maskHealth < 50>>
 
     Narrator: You hug your daughter in a deep embrace.
 
@@ -435,6 +437,7 @@ Narrator: You look at each other, mask to mask.
 title: Masking_Narrative_BrokenScenario
 position: 704,1720
 ---
+<<hideCharacter CharacterManager>>
 Narrator: Shhh! Silence! Your voice is nowhere. You search to the left; you search even further to right. 
 Narrator: Look! There! Your voice and silence are dancing! One covers the other as they turn!
 Narrator: Your ability to speak and your inability to express yourself are understandable. Do not give up, Nacym!
