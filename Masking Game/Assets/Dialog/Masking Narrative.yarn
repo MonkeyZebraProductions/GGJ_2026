@@ -14,7 +14,7 @@ Narrator: But suddenly, all the smiles dropped... What had happened?
 Narrator: You forget about your need for air and focus on the conversation.
 
 <<swapCharacter CharacterManager Mum>>
-//<<twister_start FingerTwister>>
+<<twister_start FingerTwister>>
 Mom: Nacym where will you spend New Year's Eve?
 -> “Well . . . Sulmira and I were thinking maybe this year would be just the two of us and Astele . . .”
     <<jump Masking_Narrative_ScenarioA_Responce1>>

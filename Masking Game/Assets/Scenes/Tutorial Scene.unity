@@ -425,6 +425,10 @@ PrefabInstance:
       value: DialogueSystem
       objectReference: {fileID: 0}
     - target: {fileID: 4291817896104515994, guid: 47147036a9c30cf429f7d7634022fb5c, type: 3}
+      propertyPath: addSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 23ccc057b422b1f4193ad89100fea07f, type: 3}
+    - target: {fileID: 4291817896104515994, guid: 47147036a9c30cf429f7d7634022fb5c, type: 3}
       propertyPath: maxCount
       value: 3
       objectReference: {fileID: 0}
