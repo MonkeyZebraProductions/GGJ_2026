@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using Yarn.Unity;
 
 public class KeyGameController : MonoBehaviour
@@ -20,6 +21,7 @@ public class KeyGameController : MonoBehaviour
 
     [Header("Penalty")]
     [SerializeField] private int mistakes = 0;
+    [SerializeField] public UnityEvent? OnKeyMissed;
 
     [Header("SFX/VFX")]
     [SerializeField] private AudioSource audioSource;
@@ -137,7 +139,7 @@ public class KeyGameController : MonoBehaviour
     {
         mistakes += 1;
         SyncYarn();
-
+        OnKeyMissed?.Invoke();
         if (missSfx && audioSource) audioSource.PlayOneShot(missSfx);
         //if (missVfx) missVfx.Play();
     }

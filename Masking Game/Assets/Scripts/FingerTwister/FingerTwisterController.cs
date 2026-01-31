@@ -19,6 +19,7 @@ public class FingerTwisterController : MonoBehaviour
     [SerializeField] private float pauseTime = 5f; 
     [Header("Penalty")]
     [SerializeField] private int mistakes = 0;
+    [SerializeField] public UnityEvent? OnGaugeEmpty;
 
     [Header("SFX")]
     [SerializeField] private AudioSource audioSource;
@@ -201,11 +202,11 @@ public class FingerTwisterController : MonoBehaviour
         mistakes += 1;
 
         if (missSfx && audioSource) audioSource.PlayOneShot(missSfx);
-            OnGaugeEmpty?.Invoke(this);
+            OnGaugeEmpty?.Invoke();
 
         StopTwister();
     }
 
-     public event Action<FingerTwisterController> OnGaugeEmpty;
+    //public event Action<FingerTwisterController> OnGaugeEmpty;
 
 }

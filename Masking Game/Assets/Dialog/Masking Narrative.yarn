@@ -77,7 +77,8 @@ position: 253,271
 <<swapCharacter CharacterManager Narrator>>
 Narrator: Everyone seemed content, though there wasn’t a glimpse of excitement.
 Narrator: It was like everybody expected this discussion to unfold this way. 
-Narrator: Only Sulmira gives you a sad smile. Your answer felt like a small, everyday betrayal.  
+Narrator: Only Sulmira gives you a sad smile. Your answer felt like a small, everyday betrayal.
+<<swapCharacter CharacterManager Astelle>> 
 Narrator: You see young Astele on her arms; a small flame from the candle was burning on her little blouse, yet she slept peacefully.
 Narrator: You put the fire out caressing her teeny-tiny horns.
 <<jump Masking_Narrative_ScenarioB>>
@@ -93,9 +94,9 @@ Narrator: The day has come!
 Narrator: The Nightmare’s gallop lit the road, signaling your mother’s arrival.
 Narrator: You could almost smell in the air that something uncommon was about to happen.  
 Narrator: Sulmira kisses you good luck and you open the door...
+<<swapCharacter CharacterManager Mum>>
 Narrator: Only to see your mom hugging a figure that reminded you of someone...
 
-<<swapCharacter CharacterManager Mum>>
 Mom: “You remember Lorien?! I was thinking about what gift I should bring you. And then you know ha ha ha...” 
 
 <<swapCharacter CharacterManager Narrator>>
@@ -397,10 +398,12 @@ Narrator: You look at each other, mask to mask.
     Narrator: Some seconds pass. Your wife comes to you and hugs you. 
     Narrator: Your daughter slowly comes and touches your horns. You laugh in between tears.
 
+    <<swapCharacter CharacterManager Astelle>>
     Astele: "Mom?"
     
     <<swapCharacter CharacterManager Nacym>>
     Nacym: "Yes, sweetheart?"
+    <<swapCharacter CharacterManager Astelle>>
     Astele: “I didn’t know thatt   y o u   can cry”
     <<swapCharacter CharacterManager Narrator>>
     Narrator: Your mask breaks.

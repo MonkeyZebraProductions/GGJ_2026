@@ -85,6 +85,10 @@ public class CharacterSwapper : MonoBehaviour
                     LineText.font = Lorien.fontAsset;
                     MoveCharacterForward(Lorien.CharacterPoitrait);
                     break;
+                case CharacterEnum.Astelle:
+                    //LineText.font = Lorien.fontAsset;
+                    MoveCharacterForward(Astelle.CharacterPoitrait);
+                    break;
                 default:
                     LineText.font = defaultFont;
                     break;
