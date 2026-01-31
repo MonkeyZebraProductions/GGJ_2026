@@ -13,13 +13,15 @@ public class FingerTwisterController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI holdText; // "HOLD: A + S + D"
     
     [Header("Progression")]
-    [SerializeField] private int startCount = 1;
-    [SerializeField] private int maxCount = 4;
+    public int startCount = 1;
+    public int maxCount = 4;
     [SerializeField] private float holdConfirmTime = 5f; 
-    [SerializeField] private float pauseTime = 5f; 
+    [SerializeField] private float pauseTime = 5f;
+    [SerializeField] public UnityEvent OnGuageFull;
+
     [Header("Penalty")]
     [SerializeField] private int mistakes = 0;
-    [SerializeField] public UnityEvent? OnGaugeEmpty;
+    [SerializeField] public UnityEvent OnGaugeEmpty;
 
     [Header("SFX")]
     [SerializeField] private AudioSource audioSource;
@@ -122,8 +124,12 @@ public class FingerTwisterController : MonoBehaviour
 
             confirmTimer += Time.deltaTime;
 
-            if (required.Count == maxCount)
+            if (required.Count == maxCount && gaugeValue>=1)
+            {
+                OnGuageFull.Invoke();
                 StopTwister(); 
+
+            }
 
             if (confirmTimer >= holdConfirmTime + UnityEngine.Random.Range(0, 5) && required.Count < maxCount)
             {

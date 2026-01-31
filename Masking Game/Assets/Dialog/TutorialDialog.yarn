@@ -3,8 +3,8 @@
 <<twister_stop FingerTwister>>
 Narrator: Ah, frustration. Your darkvision cannot lead you through this particular darkness. When you feel frustrated, words begin to form in your mouth. Disconnected letters appear, dancing around the tip of your tongue. 
 //Twister Popup
-Narrator: Look a letter there! As they surface, you must press them; otherwise, you risk hurting yourself by stumbling through your own dim reality.
 <<twister_start FingerTwister>>
+Narrator: Look a letter there! As they surface, you must press them; otherwise, you risk hurting yourself by stumbling through your own dim reality.
 ===
 
 title: TutorialComplete
@@ -21,4 +21,5 @@ Narrator: I see you have your mask on... and when you don’t, you bind it to yo
 Narrator: That is the same hand that reaches out to greet others, the one that is always first to offer a hug, support, and comfort.
 Narrator: You are sitting in that chair in the family house, where everything always seems out of place. It feels as if every time you visit, someone moves the furniture by just a single centimeter. 
 Narrator: You never feel truly comfortable, yet you always feel like you 'shouldn’t' feel that way...
+<<goToMaingame DialogueSystem>>
 ===

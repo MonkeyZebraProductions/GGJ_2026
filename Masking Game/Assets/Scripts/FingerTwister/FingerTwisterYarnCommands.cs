@@ -6,9 +6,9 @@ public class FingerTwisterYarnCommands : MonoBehaviour
     [SerializeField] private FingerTwisterController twister;
 
     [YarnCommand("twister_start")]
-    public void StartTwister(int startCount = 1, int maxCount = 4)
+    public void StartTwister()
     {
-        twister.StartTwister(startCount, maxCount);
+        twister.StartTwister(twister.startCount, twister.maxCount);
     }
 
     [YarnCommand("twister_stop")]

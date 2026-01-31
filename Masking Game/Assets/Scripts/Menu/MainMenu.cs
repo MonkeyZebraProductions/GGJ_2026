@@ -223,13 +223,13 @@ public class MainMenu : MonoBehaviour
                 .OnUpdate(() => Debug.Log($"Fade en progreso, alpha: {fadePanelCanvasGroup.alpha}"))
                 .OnComplete(() => {
                     Debug.Log("Fade completado, cargando escena");
-                    SceneManager.LoadScene("MainGameScene");
+                    SceneManager.LoadScene("Tutorial Scene");
                 });
         }
         else
         {
             Debug.LogError("fadePanelCanvasGroup es null!");
-            SceneManager.LoadScene("MainGameScene");
+            SceneManager.LoadScene("Tutorial Scene");
         }
     }
 
