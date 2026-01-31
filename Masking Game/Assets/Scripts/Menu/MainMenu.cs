@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 using DG.Tweening;
 
 public class MainMenu : MonoBehaviour
@@ -8,6 +9,12 @@ public class MainMenu : MonoBehaviour
     [Header("UI References")]
     public GameObject creditsPanel; // Arrastra aquí el panel de créditos desde el Inspector
     public GameObject fadePanel; // Panel negro para transiciones
+    
+    [Header("Audio")]
+    public AudioClip hoverSound; // Sonido hover
+    public AudioClip clickSound; // Sonido click
+    public AudioClip fadeTransitionSound; // Sonido fade transition
+    private AudioSource audioSource;
     
     [Header("Animation Settings")]
     public float fadeToBlackDuration = 1.0f;
@@ -32,6 +39,9 @@ public class MainMenu : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        // Configurar AudioSource
+        SetupAudioSource();
+        
         // Asegurar que el panel de créditos esté cerrado al inicio
         if (creditsPanel != null)
         {
@@ -50,6 +60,9 @@ public class MainMenu : MonoBehaviour
         
         // Configurar botones de enlaces
         SetupLinkButtons();
+        
+        // Configurar hover effects en todos los botones
+        SetupHoverEffects();
     }
     
     private void SetupFadePanel()
@@ -91,10 +104,99 @@ public class MainMenu : MonoBehaviour
             Debug.LogError("Fade Panel no está asignado en el Inspector. Arrastra el panel negro aquí.");
         }
     }
+    
+    private void SetupAudioSource()
+    {
+        // Obtener o añadir AudioSource
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+        
+        // Configurar AudioSource
+        audioSource.playOnAwake = false;
+        audioSource.volume = 0.7f;
+    }
+    
+    private void SetupHoverEffects()
+    {
+        // Encontrar todos los botones en la escena y añadir hover effects
+        Button[] allButtons = FindObjectsOfType<Button>();
+        
+        foreach (Button button in allButtons)
+        {
+            AddHoverEffect(button);
+        }
+        
+        // Asegurar que los botones de links específicos tengan hover effect
+        if (linkButton1 != null) AddHoverEffect(linkButton1);
+        if (linkButton2 != null) AddHoverEffect(linkButton2);
+        if (linkButton3 != null) AddHoverEffect(linkButton3);
+        if (linkButton4 != null) AddHoverEffect(linkButton4);
+        if (linkButton5 != null) AddHoverEffect(linkButton5);
+    }
+    
+    private void AddHoverEffect(Button button)
+    {
+        if (button == null) return;
+        
+        // Obtener o añadir EventTrigger
+        EventTrigger trigger = button.GetComponent<EventTrigger>();
+        if (trigger == null)
+        {
+            trigger = button.gameObject.AddComponent<EventTrigger>();
+        }
+        
+        // Verificar si ya tiene un hover effect
+        bool hasHoverEffect = false;
+        foreach (var triggerEvent in trigger.triggers)
+        {
+            if (triggerEvent.eventID == EventTriggerType.PointerEnter)
+            {
+                hasHoverEffect = true;
+                break;
+            }
+        }
+        
+        // Si no tiene hover effect, añadirlo
+        if (!hasHoverEffect)
+        {
+            EventTrigger.Entry hoverEntry = new EventTrigger.Entry();
+            hoverEntry.eventID = EventTriggerType.PointerEnter;
+            hoverEntry.callback.AddListener((data) => { PlayHoverSound(); });
+            trigger.triggers.Add(hoverEntry);
+        }
+    }
+    
+    private void PlayHoverSound()
+    {
+        if (audioSource != null && hoverSound != null)
+        {
+            audioSource.PlayOneShot(hoverSound);
+        }
+    }
+    
+    private void PlayClickSound()
+    {
+        if (audioSource != null && clickSound != null)
+        {
+            audioSource.PlayOneShot(clickSound);
+        }
+    }
+    
+    private void PlayFadeTransitionSound()
+    {
+        if (audioSource != null && fadeTransitionSound != null)
+        {
+            audioSource.PlayOneShot(fadeTransitionSound);
+        }
+    }
 
     // Método para el botón Play
     public void PlayButton()
     {
+        PlayClickSound();
         Debug.Log("PlayButton presionado");
         
         // Fade to black y luego cambiar escena
@@ -114,7 +216,10 @@ public class MainMenu : MonoBehaviour
             
             fadePanelCanvasGroup.DOFade(1f, fadeToBlackDuration)
                 .SetEase(Ease.InOutQuad)
-                .OnStart(() => Debug.Log("Fade iniciado"))
+                .OnStart(() => {
+                    Debug.Log("Fade iniciado");
+                    PlayFadeTransitionSound();
+                })
                 .OnUpdate(() => Debug.Log($"Fade en progreso, alpha: {fadePanelCanvasGroup.alpha}"))
                 .OnComplete(() => {
                     Debug.Log("Fade completado, cargando escena");
@@ -131,6 +236,7 @@ public class MainMenu : MonoBehaviour
     // Método para el botón Quit
     public void QuitButton()
     {
+        PlayClickSound();
         #if UNITY_EDITOR
             // Si estamos en el editor, para el modo play
             UnityEditor.EditorApplication.isPlaying = false;
@@ -143,6 +249,7 @@ public class MainMenu : MonoBehaviour
     // Método para abrir el panel de créditos
     public void OpenCreditsPanel()
     {
+        PlayClickSound();
         if (creditsPanel != null && creditsPanelCanvasGroup != null)
         {
             // Activar el panel y hacer fade in
@@ -156,6 +263,7 @@ public class MainMenu : MonoBehaviour
     // Método para cerrar el panel de créditos (opcional, para un botón "X" en el panel)
     public void CloseCreditsPanel()
     {
+        PlayClickSound();
         if (creditsPanel != null && creditsPanelCanvasGroup != null)
         {
             creditsPanelCanvasGroup.DOFade(0f, 0.5f)
@@ -179,6 +287,7 @@ public class MainMenu : MonoBehaviour
     // Método para abrir URL
     private void OpenURL(string url)
     {
+        PlayClickSound();
         if (!string.IsNullOrEmpty(url))
         {
             Application.OpenURL(url);
