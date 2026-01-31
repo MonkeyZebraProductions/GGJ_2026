@@ -429,6 +429,8 @@ Narrator: You look at each other, mask to mask.
 
 <<endif>>
 
+<<MoveScene DialogueSystem MainMenu>>
+
 ===
 title: Masking_Narrative_BrokenScenario
 position: 704,1720

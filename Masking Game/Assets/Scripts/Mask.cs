@@ -43,11 +43,13 @@ public class Mask : MonoBehaviour
         {
             yarnVars.SetValue(yarnMaskVarName, currentMaskHealth);
         }
+        //When Health is empty
         if(currentMaskHealth<=0)
         {
             Debug.Log("GameEnd");
             return;
         }
+        //When Health is low
         if (currentMaskHealth<=maskHealthCheckpointValue)
         {
             if (maskAudioSource != null && !maskAudioSource.isPlaying)
