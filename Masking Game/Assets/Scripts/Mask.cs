@@ -5,6 +5,7 @@ using Yarn.Unity;
 public class Mask : MonoBehaviour
 {
     private Image maskImage;
+    private bool _gameEnded;
 
     [Header("MaskHealth")]
     [SerializeField]
@@ -54,6 +55,9 @@ public class Mask : MonoBehaviour
 
     public void LoseMaskHealth(int maskHealthLoss)
     {
+        if (_gameEnded)
+        { return; }
+
         currentMaskHealth -= maskHealthLoss;
         if (yarnVars != null) 
         {
@@ -67,6 +71,7 @@ public class Mask : MonoBehaviour
             {
                 NodeMovement.ManualAdvence();
             }
+            _gameEnded = true;
             return;
         }
         //When Health is low

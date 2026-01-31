@@ -1,4 +1,5 @@
 using DG.Tweening;
+using System.Collections;
 using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -94,8 +95,16 @@ public class ManualNodeMovement : MonoBehaviour
     {
         if (dialogueRunner != null)
         {
-            dialogueRunner.StartDialogue(NodeToAdvanceTo);
+            StartCoroutine(RestartDialog());
+            
         }
+    }
+
+    IEnumerator RestartDialog()
+    {
+        dialogueRunner.Stop();
+        yield return new WaitForSeconds(1f);
+        dialogueRunner.StartDialogue(NodeToAdvanceTo);
     }
 
     [YarnCommand("MoveScene")]

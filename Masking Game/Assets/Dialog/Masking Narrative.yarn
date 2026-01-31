@@ -359,6 +359,7 @@ Narrator: The conversation resumes, but the space between you feels wider than b
 title: Masking_Narrative_ScenarioE
 position: -26,2526
 ---
+<<twister_end FingerTwister>>
 <<swapBG BGManager 4>>
 <<swapCharacter CharacterManager Narrator>>
 Narrator: Your mother asks your daughter to smile. She does.
@@ -439,7 +440,7 @@ tags:
 position: 704,1720
 ---
 <<swapBG BGManager 7>>
-<<twister_stop FingerTwister>>
+<<twister_end FingerTwister>>
 <<hideCharacter CharacterManager>>
 <<music DialogueSystem BadEnd>>
 Narrator: Shhh! Silence! Your voice is nowhere. You search to the left; you search even further to right. 

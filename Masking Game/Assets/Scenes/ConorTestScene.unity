@@ -435,6 +435,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1139407512267615084, guid: 47147036a9c30cf429f7d7634022fb5c, type: 3}
+      propertyPath: NodeToAdvanceTo
+      value: Masking_Narrative_BrokenScenario
+      objectReference: {fileID: 0}
     - target: {fileID: 1391626159087814110, guid: 47147036a9c30cf429f7d7634022fb5c, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
@@ -486,6 +490,14 @@ PrefabInstance:
     - target: {fileID: 4147130079553494542, guid: 47147036a9c30cf429f7d7634022fb5c, type: 3}
       propertyPath: m_Name
       value: DialogueSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 4291817896104515994, guid: 47147036a9c30cf429f7d7634022fb5c, type: 3}
+      propertyPath: pauseTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4291817896104515994, guid: 47147036a9c30cf429f7d7634022fb5c, type: 3}
+      propertyPath: drainPerSecond
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4291817896104515994, guid: 47147036a9c30cf429f7d7634022fb5c, type: 3}
       propertyPath: OnGaugeEmpty.m_PersistentCalls.m_Calls.Array.data[0].m_Target

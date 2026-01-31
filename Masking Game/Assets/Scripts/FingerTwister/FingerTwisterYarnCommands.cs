@@ -18,6 +18,12 @@ public class FingerTwisterYarnCommands : MonoBehaviour
         twister.StopTwister();
     }
 
+    [YarnCommand("twister_end")]
+    public void EndTwister()
+    {
+        twister.gameObject.SetActive(false);
+    }
+
     [YarnCommand("twister_max")]
     public void SetMax(int max)
     {
