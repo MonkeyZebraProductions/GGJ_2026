@@ -256,6 +256,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &546272850 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4147130079553494542, guid: 47147036a9c30cf429f7d7634022fb5c, type: 3}
+  m_PrefabInstance: {fileID: 575711230}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &546272856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546272850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8265a1599055baf4dbd5974e002ef8b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MusicController
+  source: {fileID: 1035630004}
+  tracks:
+  - name: BadEnd
+    clip: {fileID: 8300000, guid: d9b98b9500318ec4697b448fc5a09c78, type: 3}
+    volume: 1
+  fadeInSeconds: 1
+  loop: 1
 --- !u!1001 &575711230
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -367,6 +391,10 @@ PrefabInstance:
     - target: {fileID: 2557160227478556627, guid: 47147036a9c30cf429f7d7634022fb5c, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4278190080
+      objectReference: {fileID: 0}
+    - target: {fileID: 3165570784331987956, guid: 47147036a9c30cf429f7d7634022fb5c, type: 3}
+      propertyPath: maxMaskHealth
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3165570784331987956, guid: 47147036a9c30cf429f7d7634022fb5c, type: 3}
       propertyPath: uiImageToActivate
@@ -526,7 +554,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3734374631668199080, guid: 47147036a9c30cf429f7d7634022fb5c, type: 3}
       insertIndex: 1
       addedObject: {fileID: 844977717}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4147130079553494542, guid: 47147036a9c30cf429f7d7634022fb5c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 546272856}
   m_SourcePrefab: {fileID: 100100000, guid: 47147036a9c30cf429f7d7634022fb5c, type: 3}
 --- !u!224 &575711231 stripped
 RectTransform:

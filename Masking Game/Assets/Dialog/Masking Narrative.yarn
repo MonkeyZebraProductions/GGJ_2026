@@ -435,10 +435,13 @@ Narrator: You look at each other, mask to mask.
 
 ===
 title: Masking_Narrative_BrokenScenario
+tags: 
 position: 704,1720
 ---
 <<swapBG BGManager 7>>
+<<twister_stop FingerTwister>>
 <<hideCharacter CharacterManager>>
+<<music DialogueSystem BadEnd>>
 Narrator: Shhh! Silence! Your voice is nowhere. You search to the left; you search even further to right. 
 Narrator: Look! There! Your voice and silence are dancing! One covers the other as they turn!
 Narrator: Your ability to speak and your inability to express yourself are understandable. Do not give up, Nacym!

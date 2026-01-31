@@ -1,6 +1,6 @@
 ﻿title: Tutorial
 ---
-<<twister_stop FingerTwister>>
+//<<twister_stop FingerTwister>>
 Narrator: Ah, frustration. Your darkvision cannot lead you through this particular darkness. When you feel frustrated, words begin to form in your mouth. Disconnected letters appear, dancing around the tip of your tongue. 
 //Twister Popup
 <<twister_start FingerTwister>>
