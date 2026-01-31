@@ -74,8 +74,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -315,8 +315,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -526,8 +526,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -748,6 +748,7 @@ MonoBehaviour:
   canvasGroup: {fileID: 8600288214249502216}
   optionViewPrefab: {fileID: 2576261519635394347, guid: 4747a98e7284d9d488a9b84d4a680a7b, type: 3}
   timedBar: {fileID: 8834411963658593645}
+  SelectSound: {fileID: 0}
   showsLastLine: 1
   lastLineText: {fileID: 2557160227478556627}
   lastLineContainer: {fileID: 0}
@@ -990,6 +991,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   continueButton: {fileID: 7165308837776114344}
   dialogueRunner: {fileID: 3835734817548616505}
+  audioSource: {fileID: 0}
+  _playAudioTextClick: 0
 --- !u!114 &4024156642504013835
 MonoBehaviour:
   m_ObjectHideFlags: 0

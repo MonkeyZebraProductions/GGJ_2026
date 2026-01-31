@@ -15,6 +15,9 @@ public class Mask : MonoBehaviour
     private Sprite[] maskSprites;
     private int maskIndex;
 
+    [SerializeField]
+    AudioSource maskAudioSource;
+
     [Header("Yarn (optional)")]
     [SerializeField] private VariableStorageBehaviour yarnVars;
     [SerializeField] private string yarnMaskVarName = "$maskHealth";
@@ -24,6 +27,7 @@ public class Mask : MonoBehaviour
         maskImage = GetComponent<Image>();
         currentMaskHealth = maxMaskHealth;
         maskHealthCheckpointValue = currentMaskHealth/maskSprites.Length+1;
+        maskAudioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -44,7 +48,14 @@ public class Mask : MonoBehaviour
             Debug.Log("GameEnd");
             return;
         }
-        if(maskSprites != null && maskImage != null)
+        if (currentMaskHealth<=maskHealthCheckpointValue)
+        {
+            if (maskAudioSource != null && !maskAudioSource.isPlaying)
+            {
+                maskAudioSource.Play();
+            }
+        }
+        if (maskSprites != null && maskImage != null)
         {
             if(currentMaskHealth<=maxMaskHealth-maskHealthCheckpointValue*maskIndex)
             {
