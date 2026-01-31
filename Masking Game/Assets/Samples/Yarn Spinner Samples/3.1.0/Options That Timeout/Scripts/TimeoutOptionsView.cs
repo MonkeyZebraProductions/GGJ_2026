@@ -22,6 +22,9 @@ namespace Yarn.Unity.Samples
         [MustNotBeNull]
         [SerializeField] TimeoutBar? timedBar;
 
+        [SerializeField]
+        AudioSource SelectSound;
+
         // A cached pool of OptionView objects so that we can reuse them
         List<OptionItem> optionViews = new List<OptionItem>();
 
@@ -429,7 +432,7 @@ namespace Yarn.Unity.Samples
             }
             if (optionIndexToSelect > -1)
             {
-                optionViews[optionIndexToSelect].Select();
+                optionViews[optionIndexToSelect].Select();                
             }
 
             // Update the last line, if one is configured
@@ -546,6 +549,11 @@ namespace Yarn.Unity.Samples
             {
                 canvasGroup.interactable = false;
                 canvasGroup.blocksRaycasts = false;
+            }
+
+            if (SelectSound)
+            {
+                SelectSound.Play();
             }
 
             // disable the last highlighted selection flag, just in case it was set

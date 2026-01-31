@@ -342,3 +342,4 @@ MonoBehaviour:
     sprite: {fileID: 0}
     colour: {r: 0.5, g: 0.5, b: 0.5, a: 0.5019608}
   disabledStrikeThrough: 1
+  audioSource: {fileID: 0}
