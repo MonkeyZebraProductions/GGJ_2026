@@ -1096,6 +1096,7 @@ MonoBehaviour:
   - {fileID: 2178112104073917928, guid: 9dd8102ef0df89e42a103c75433809e3, type: 3}
   maskAudioSource: {fileID: 5909771606442156556}
   NodeMovement: {fileID: 1139407512267615084}
+  uiImageToActivate: {fileID: 0}
   yarnVars: {fileID: 502478408627491632}
   yarnMaskVarName: $maskHealth
 --- !u!82 &5909771606442156556
@@ -1724,7 +1725,7 @@ MonoBehaviour:
     CharacterPoitrait: {fileID: 21300000, guid: 25c235612555a684894f262d61548e05, type: 3}
   Lorien:
     fontAsset: {fileID: 11400000, guid: 4f58eb8083752834b9967b2dbe4e49ef, type: 2}
-    CharacterPoitrait: {fileID: 21300000, guid: 22c0ef7914b1bf54a92836e2969af5bd, type: 3}
+    CharacterPoitrait: {fileID: 4970845230283516088, guid: 9cc7f6702af078e4f8675724f5d8308c, type: 3}
   Astelle:
     fontAsset: {fileID: 0}
     CharacterPoitrait: {fileID: 1936429446809315832, guid: 335d52cf69e77b44784645c60867f2ab, type: 3}
