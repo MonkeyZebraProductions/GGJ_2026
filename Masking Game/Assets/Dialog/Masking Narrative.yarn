@@ -8,7 +8,7 @@ position: -5,20
 <<declare $greenCount = 0>>
 
 //<<swapBG BGManager 0>>
-Narrator: You run your fingers over my mask and scanned the faces of the people. 
+Narrator: You run your fingers over your mask and scan the faces of the people. 
 Narrator: You just wanted to go outside for a while, to catch your breath.
 Narrator: But suddenly, all the smiles dropped... What had happened? 
 Narrator: You forget about your need for air and focus on the conversation.
