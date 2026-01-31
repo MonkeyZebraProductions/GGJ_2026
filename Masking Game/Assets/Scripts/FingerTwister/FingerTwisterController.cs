@@ -47,6 +47,18 @@ public class FingerTwisterController : MonoBehaviour
     private float confirmTimer;
     private float pauseTimer;
 
+    private void Awake()
+    {
+        HideUI();
+        active = false;
+    }
+
+    private void HideUI()
+    {
+        gauge.gameObject.SetActive(false);
+        holdText.enabled = false;
+    }
+
     public void StartTwister(int start = 1, int max = 4)
     {
         gauge.enabled = true;
@@ -83,8 +95,7 @@ public class FingerTwisterController : MonoBehaviour
         pauseTimer = pauseTime;
         active = false;
         required.Clear();
-        gauge.gameObject.SetActive(false);
-        holdText.enabled = false;
+        HideUI();
 
         UpdateUI();
     }

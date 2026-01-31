@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2549063424861970389}
+  - component: {fileID: 5631573800940278100}
   m_Layer: 5
   m_Name: FingerTwister
   m_TagString: Untagged
@@ -38,6 +39,19 @@ RectTransform:
   m_AnchoredPosition: {x: 557.7, y: -129.95}
   m_SizeDelta: {x: 755.58496, y: 267.46997}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5631573800940278100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3260820131356681144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d333ea00638ed3e4e96b9c87afb4331a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FingerTwisterYarnCommands
+  twister: {fileID: 4869567482184009321}
 --- !u!1 &3731847715176258242
 GameObject:
   m_ObjectHideFlags: 0
@@ -88,8 +102,12 @@ MonoBehaviour:
   holdConfirmTime: 5
   pauseTime: 5
   mistakes: 0
+  OnGaugeEmpty:
+    m_PersistentCalls:
+      m_Calls: []
   audioSource: {fileID: 0}
   missSfx: {fileID: 0}
+  addSfx: {fileID: 0}
   gauge: {fileID: 1685561292333974899}
   fillPerSecond: 0.35
   drainPerSecond: 0.25

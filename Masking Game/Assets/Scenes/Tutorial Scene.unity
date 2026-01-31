@@ -245,7 +245,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4869567482184009321, guid: 4da4f8308d4bf804f847d4837d6e981b, type: 3}
       propertyPath: drainPerSecond
-      value: 1
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4869567482184009321, guid: 4da4f8308d4bf804f847d4837d6e981b, type: 3}
       propertyPath: holdConfirmTime
@@ -351,6 +351,7 @@ MonoBehaviour:
   - {fileID: 9167791471322225435, guid: bfd77e9160e7c2a4a8d65c9aac2062c5, type: 3}
   - {fileID: -1026163982853368280, guid: 0d2e5144725f3c64fadd8c65ab7614df, type: 3}
   - {fileID: 755410501529084426, guid: b49e8e06db0ae294cbce0d602ad2fd56, type: 3}
+  maskAudioSource: {fileID: 0}
   yarnVars: {fileID: 1594571932}
   yarnMaskVarName: $maskHealth
 --- !u!114 &346509257
@@ -754,6 +755,10 @@ PrefabInstance:
     - target: {fileID: 3345502866516495283, guid: 47147036a9c30cf429f7d7634022fb5c, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3835734817548616505, guid: 47147036a9c30cf429f7d7634022fb5c, type: 3}
+      propertyPath: startNode
+      value: Tutorial
       objectReference: {fileID: 0}
     - target: {fileID: 3930042537198666108, guid: 47147036a9c30cf429f7d7634022fb5c, type: 3}
       propertyPath: Narrator.fontAsset
