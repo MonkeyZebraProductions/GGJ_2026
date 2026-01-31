@@ -437,6 +437,7 @@ Narrator: You look at each other, mask to mask.
 title: Masking_Narrative_BrokenScenario
 position: 704,1720
 ---
+<<swapBG BGManager 7>>
 <<hideCharacter CharacterManager>>
 Narrator: Shhh! Silence! Your voice is nowhere. You search to the left; you search even further to right. 
 Narrator: Look! There! Your voice and silence are dancing! One covers the other as they turn!
