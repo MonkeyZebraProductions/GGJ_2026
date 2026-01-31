@@ -15,7 +15,7 @@ public class FingerTwisterController : MonoBehaviour
     [Header("Progression")]
     [SerializeField] private int startCount = 1;
     [SerializeField] private int maxCount = 4;
-    [SerializeField] private float holdConfirmTime = 0.25f; 
+    [SerializeField] private float holdConfirmTime = 5f; 
     [SerializeField] private float pauseTime = 5f; 
     [Header("Penalty")]
     [SerializeField] private int mistakes = 0;
@@ -23,6 +23,7 @@ public class FingerTwisterController : MonoBehaviour
     [Header("SFX")]
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip missSfx;
+    [SerializeField] private AudioClip addSfx;
 
     [Header("Gauge")]
     [SerializeField] private Slider gauge;       
@@ -112,7 +113,7 @@ public class FingerTwisterController : MonoBehaviour
             if (required.Count == maxCount)
                 StopTwister(); 
 
-            if (confirmTimer >= holdConfirmTime && required.Count < maxCount)
+            if (confirmTimer >= holdConfirmTime + UnityEngine.Random.Range(0, 5) && required.Count < maxCount)
             {
                 confirmTimer = 0f;
                 AddRandomKey();
@@ -162,6 +163,7 @@ public class FingerTwisterController : MonoBehaviour
                 break;
             }
         }
+        if (addSfx && audioSource) audioSource.PlayOneShot(addSfx);
     }
 
     private void UpdateUI()
