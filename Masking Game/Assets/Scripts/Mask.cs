@@ -18,6 +18,9 @@ public class Mask : MonoBehaviour
     [SerializeField]
     AudioSource maskAudioSource;
 
+    [SerializeField]
+    private ManualNodeMovement NodeMovement;
+
     [Header("Yarn (optional)")]
     [SerializeField] private VariableStorageBehaviour yarnVars;
     [SerializeField] private string yarnMaskVarName = "$maskHealth";
@@ -47,6 +50,10 @@ public class Mask : MonoBehaviour
         if(currentMaskHealth<=0)
         {
             Debug.Log("GameEnd");
+            if(NodeMovement != null)
+            {
+                NodeMovement.ManualAdvence();
+            }
             return;
         }
         //When Health is low

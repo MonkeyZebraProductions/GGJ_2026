@@ -1092,7 +1092,8 @@ MonoBehaviour:
   - {fileID: 55306620252728527, guid: 541694da10167754ba85ba584f44829c, type: 3}
   - {fileID: 2909641710067635177, guid: f66d702cc8da5ea45826d1a2caad86b4, type: 3}
   - {fileID: 2178112104073917928, guid: 9dd8102ef0df89e42a103c75433809e3, type: 3}
-  maskAudioSource: {fileID: 0}
+  maskAudioSource: {fileID: 5909771606442156556}
+  NodeMovement: {fileID: 1139407512267615084}
   yarnVars: {fileID: 502478408627491632}
   yarnMaskVarName: $maskHealth
 --- !u!82 &5909771606442156556
@@ -1578,7 +1579,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 5eef654cb9267c340a5e3cf67823c19e, type: 3}
+  m_Resource: {fileID: 8300000, guid: e42d35ecc2316e744994194941657e4d, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.3
   m_Pitch: 1
@@ -1716,7 +1717,7 @@ MonoBehaviour:
     CharacterPoitrait: {fileID: 0}
   Mum:
     fontAsset: {fileID: 11400000, guid: abc15cb53c55e974d8590ca996ac724c, type: 2}
-    CharacterPoitrait: {fileID: 21300000, guid: abb51221fb0527a45a344dc8a8f6511a, type: 3}
+    CharacterPoitrait: {fileID: -940960903899437880, guid: b6efaeae43539514c9444b34fa056cad, type: 3}
   Sulmira:
     fontAsset: {fileID: 11400000, guid: 1d89db932690ab7498b4063b35b2059a, type: 2}
     CharacterPoitrait: {fileID: 21300000, guid: 25c235612555a684894f262d61548e05, type: 3}
@@ -1725,7 +1726,7 @@ MonoBehaviour:
     CharacterPoitrait: {fileID: 21300000, guid: 22c0ef7914b1bf54a92836e2969af5bd, type: 3}
   Astelle:
     fontAsset: {fileID: 0}
-    CharacterPoitrait: {fileID: 21300000, guid: 2b97cdd989506aa4ab9977b5986ff7b7, type: 3}
+    CharacterPoitrait: {fileID: 1936429446809315832, guid: 335d52cf69e77b44784645c60867f2ab, type: 3}
   LineText: {fileID: 846917665010217118}
   CharacterPoitraitContainer: {fileID: 4343188055042141452}
 --- !u!1 &5177838498110849003
@@ -2252,7 +2253,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4479085587574908402
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2479,7 +2480,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8308728963590514197}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
