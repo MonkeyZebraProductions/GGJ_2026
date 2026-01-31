@@ -94,7 +94,7 @@ public class CharacterSwapper : MonoBehaviour
     }
 
     [YarnCommand("hideCharacter")]
-    void HideCharacter()
+    public void HideCharacter()
     {
         CharacterPoitraitContainer.enabled = false;
     }
