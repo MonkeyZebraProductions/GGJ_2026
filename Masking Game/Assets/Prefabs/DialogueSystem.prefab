@@ -2230,7 +2230,7 @@ MonoBehaviour:
   fadeUpDuration: 0.25
   fadeDownDuration: 0.1
   autoAdvance: 1
-  autoAdvanceDelay: 3
+  autoAdvanceDelay: 7
   typewriterStyle: 1
   lettersPerSecond: 60
   wordsPerSecond: 10
