@@ -22,6 +22,7 @@ public class FingerTwisterYarnCommands : MonoBehaviour
     [YarnCommand("twister_end")]
     public void EndTwister()
     {
+        twister.HideUI();
         twister.gameObject.SetActive(false);
     }
 
