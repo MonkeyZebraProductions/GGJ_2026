@@ -166,7 +166,7 @@ position: 279,811
 <<swapCharacter CharacterManager Narrator>>
 Narrator: Lorien hugs you for a sec and starts talking, and talking, and talking, and talking.
 Narrator: Your wife attempts to interrupt, but not even she can withstand his talking, and talking and talking,
-Narrator: andtalkingandtalkingand [b][i]taaaaalkkkkinnnnggggggggggggggggggggggggggggggggggggggg.[/b][/i] 
+Narrator: andtalkingandtalkingand [b]taaaaalkkkkinnnnggggggggggggggggggggggggggggggggggggggg.[/b] 
 Narrator: Eventually, his ramblings cease as he gives you a hearty chuckle.
 
 <<swapCharacter CharacterManager Lorien>>
@@ -379,7 +379,7 @@ Narrator: You look at each other, mask to mask.
     Narrator: You hug your daughter in a deep embrace.
 
     <<swapBG BGManager 5>>
-    <<swapCharacter CharacterManager Nacym>>
+    <<hideCharacter CharacterManager>>
     <<music DialogueSystem GoodEnd>>
     Nacym: [i]I imagined myself from a distance,[/i]
     Nacym: [i]balancing masks instead of a face.[/i]
@@ -416,7 +416,7 @@ Narrator: You look at each other, mask to mask.
     <<stopCry DialogueSystem>>
 
     <<swapBG BGManager 6>>
-    <<swapCharacter CharacterManager Nacym>>
+    <<hideCharacter CharacterManager>>
     <<music DialogueSystem GoodEnd>>
     Nacym:[i]I wasn’t ready for this.[/i]
     Nacym:[i]I went out for a walk.[/i]

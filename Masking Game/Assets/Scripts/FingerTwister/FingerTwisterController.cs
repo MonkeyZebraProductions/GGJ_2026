@@ -9,6 +9,8 @@ using Yarn.Unity;
 
 public class FingerTwisterController : MonoBehaviour
 {
+    public bool GameStarted;
+
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI holdText; // "HOLD: A + S + D"
     
@@ -54,6 +56,7 @@ public class FingerTwisterController : MonoBehaviour
     {
         HideUI();
         active = false;
+        //gameObject.SetActive(false);
     }
 
     private void HideUI()
@@ -71,7 +74,11 @@ public class FingerTwisterController : MonoBehaviour
 
     public void StartTwister(int start = 1, int max = 4)
     {
-        if (!active) return;
+
+        if (!active)
+        {
+            return;
+        }
         
         gaugeEmptyTriggered = false;
         ShowUI();
@@ -114,6 +121,8 @@ public class FingerTwisterController : MonoBehaviour
 
     private void Update()
     {
+        if (!GameStarted) return;
+
         if (pauseTimer > 0f) 
         {
             pauseTimer -= Time.deltaTime;

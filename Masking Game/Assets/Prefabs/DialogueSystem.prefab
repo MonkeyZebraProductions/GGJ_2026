@@ -153,7 +153,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7157238178988158103
 RectTransform:
   m_ObjectHideFlags: 0
@@ -779,7 +779,7 @@ MonoBehaviour:
   - {fileID: 3269646996138629966, guid: 2b11f0176ca196b4cbc85af38a17e2fb, type: 3}
   - {fileID: -4323034485975846994, guid: 39aae3aa17ba70d47aa421e64ae39108, type: 3}
   - {fileID: -5160248144233441662, guid: 9bab7a70985d4e24e82ff22f2263e6c7, type: 3}
-  - {fileID: 4874153973056223708, guid: ef69070fda81b01459f55dd4925ceffd, type: 3}
+  - {fileID: -4887127480105806359, guid: fc8b522b4bfbe2949b91a7e75a76751b, type: 3}
   bgImage: {fileID: 1305793614505263223}
 --- !u!1 &3561153151636736922
 GameObject:
@@ -1034,8 +1034,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 921.6343, y: 236.19812}
-  m_SizeDelta: {x: 638.1528, y: 806.7216}
+  m_AnchoredPosition: {x: 1020.0908, y: 360.6621}
+  m_SizeDelta: {x: 441.2397, y: 557.7938}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3318211853186975741
 CanvasRenderer:
@@ -1719,16 +1719,16 @@ MonoBehaviour:
     CharacterPoitrait: {fileID: 0}
   Mum:
     fontAsset: {fileID: 11400000, guid: abc15cb53c55e974d8590ca996ac724c, type: 2}
-    CharacterPoitrait: {fileID: -940960903899437880, guid: b6efaeae43539514c9444b34fa056cad, type: 3}
+    CharacterPoitrait: {fileID: 21300000, guid: b6efaeae43539514c9444b34fa056cad, type: 3}
   Sulmira:
     fontAsset: {fileID: 11400000, guid: 1d89db932690ab7498b4063b35b2059a, type: 2}
-    CharacterPoitrait: {fileID: 21300000, guid: 25c235612555a684894f262d61548e05, type: 3}
+    CharacterPoitrait: {fileID: 21300000, guid: 815a15d72dd7a0340b58ec1e9e7f89d2, type: 3}
   Lorien:
     fontAsset: {fileID: 11400000, guid: 4f58eb8083752834b9967b2dbe4e49ef, type: 2}
-    CharacterPoitrait: {fileID: 4970845230283516088, guid: 9cc7f6702af078e4f8675724f5d8308c, type: 3}
+    CharacterPoitrait: {fileID: 21300000, guid: 9cc7f6702af078e4f8675724f5d8308c, type: 3}
   Astelle:
     fontAsset: {fileID: 0}
-    CharacterPoitrait: {fileID: 1936429446809315832, guid: 335d52cf69e77b44784645c60867f2ab, type: 3}
+    CharacterPoitrait: {fileID: 21300000, guid: 0e4c19ecfc0f3004fb97a4c3b38ee6b5, type: 3}
   LineText: {fileID: 846917665010217118}
   CharacterPoitraitContainer: {fileID: 4343188055042141452}
 --- !u!1 &5177838498110849003

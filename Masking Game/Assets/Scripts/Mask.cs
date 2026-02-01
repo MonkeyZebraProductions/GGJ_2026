@@ -72,7 +72,6 @@ public class Mask : MonoBehaviour
                 NodeMovement.ManualAdvence();
             }
             _gameEnded = true;
-            return;
         }
         //When Health is low
         if (currentMaskHealth<=maskHealthCheckpointValue || currentMaskHealth <= maskHealthLoss)
@@ -80,6 +79,7 @@ public class Mask : MonoBehaviour
             if (maskAudioSource != null && !maskAudioSource.isPlaying)
             {
                 maskAudioSource.Play();
+                //maskImage.color = new Color(1f, 0.5f, 0.5f);
                 ActivateUIImage();
             }
         }

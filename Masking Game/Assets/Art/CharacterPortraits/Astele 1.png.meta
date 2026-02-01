@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: b6efaeae43539514c9444b34fa056cad
+guid: 0e4c19ecfc0f3004fb97a4c3b38ee6b5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -940960903899437880
-    second: IMG_5818_0
-  - first:
-      213: -5939056936218914720
-    second: IMG_5818_1
-  - first:
-      213: 6094679496604798087
-    second: IMG_5818_2
+      213: -5104648528471350222
+    second: Astele 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -132,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IMG_5818_0
+      name: Astele 1_0
       rect:
         serializedVersion: 2
-        x: 22
+        x: 0
         y: 0
-        width: 473
-        height: 850
+        width: 506
+        height: 798
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,52 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8c42b871b0901f2f0800000000000000
-      internalID: -940960903899437880
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: IMG_5818_1
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 418
-        width: 26
-        height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0601ad7de2b349da0800000000000000
-      internalID: -5939056936218914720
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: IMG_5818_2
-      rect:
-        serializedVersion: 2
-        x: 488
-        y: 412
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 78c4cfe06b6a49450800000000000000
-      internalID: 6094679496604798087
+      spriteID: 234ae3d7535a829b0800000000000000
+      internalID: -5104648528471350222
       vertices: []
       indices: 
       edges: []
@@ -211,9 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      IMG_5818_0: -940960903899437880
-      IMG_5818_1: -5939056936218914720
-      IMG_5818_2: 6094679496604798087
+      Astele 1_0: -5104648528471350222
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

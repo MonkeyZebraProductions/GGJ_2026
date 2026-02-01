@@ -8,6 +8,7 @@ public class FingerTwisterYarnCommands : MonoBehaviour
     [YarnCommand("twister_start")]
     public void StartTwister()
     {
+        twister.GameStarted = true;
         twister.active = true;
         twister.StartTwister(twister.startCount, twister.maxCount);
     }
