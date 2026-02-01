@@ -16,6 +16,9 @@ public class MusicController : MonoBehaviour
     [Header("Audio")]
     [SerializeField] private AudioSource source;
 
+    [Header("AudioCry")]
+    [SerializeField] private AudioSource crySource;
+
     [Header("Tracks")]
     [SerializeField] private List<Track> tracks = new();
 
@@ -40,6 +43,19 @@ public class MusicController : MonoBehaviour
 
         return null;
     }
+
+    [YarnCommand("playCry")]
+    public void PlayCry()
+    {
+        crySource.Play();
+    }
+
+    [YarnCommand("stopCry")]
+    public void StopCry()
+    {
+        crySource.Stop();
+    }
+
 
     [YarnCommand("music")]
     public void Play(string trackName)

@@ -380,6 +380,7 @@ Narrator: You look at each other, mask to mask.
 
     <<swapBG BGManager 5>>
     <<swapCharacter CharacterManager Nacym>>
+    <<music DialogueSystem GoodEnd>>
     Nacym: [i]I imagined myself from a distance,[/i]
     Nacym: [i]balancing masks instead of a face.[/i]
     Nacym:[i]Each step meant choosing which one to show.[/i]
@@ -397,6 +398,7 @@ Narrator: You look at each other, mask to mask.
 <<else>>
 
     <<swapCharacter CharacterManager Narrator>>
+    <<playCry DialogueSystem>>
     Narrator: Tears burst into your eyes. 
     Narrator: Your daughter freezes more and sinks in doubt about what happened. 
     Narrator: Some seconds pass. Your wife comes to you and hugs you. 
@@ -411,9 +413,11 @@ Narrator: You look at each other, mask to mask.
     Astele: “I didn’t know thatt   y o u   can cry”
     <<swapCharacter CharacterManager Narrator>>
     Narrator: Your mask breaks.
+    <<stopCry DialogueSystem>>
 
     <<swapBG BGManager 6>>
     <<swapCharacter CharacterManager Nacym>>
+    <<music DialogueSystem GoodEnd>>
     Nacym:[i]I wasn’t ready for this.[/i]
     Nacym:[i]I went out for a walk.[/i]
     Nacym:[i]I imagined myself from a distance,[/i]
