@@ -100,7 +100,11 @@ MonoBehaviour:
   startCount: 1
   maxCount: 4
   holdConfirmTime: 5
+  randomHoldConfirm: 5
   pauseTime: 5
+  OnGuageFull:
+    m_PersistentCalls:
+      m_Calls: []
   mistakes: 0
   OnGaugeEmpty:
     m_PersistentCalls:
@@ -112,6 +116,7 @@ MonoBehaviour:
   fillPerSecond: 0.35
   drainPerSecond: 0.25
   startGaugeValue: 1
+  active: 0
 --- !u!1 &4131504041259248574
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,7 +185,7 @@ MonoBehaviour:
   m_text: New Text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c47b0a7071328274782c87e94fe271a0, type: 2}
-  m_sharedMaterial: {fileID: 1488887457516788558, guid: c47b0a7071328274782c87e94fe271a0, type: 2}
+  m_sharedMaterial: {fileID: 5321737424683196910, guid: c47b0a7071328274782c87e94fe271a0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -400,7 +405,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 3639296562071769574}
   m_HandleRect: {fileID: 0}
