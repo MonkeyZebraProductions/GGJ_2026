@@ -59,7 +59,7 @@ public class FingerTwisterController : MonoBehaviour
         //gameObject.SetActive(false);
     }
 
-    private void HideUI()
+    public void HideUI()
     {
         gauge.gameObject.SetActive(false);
         holdText.enabled = false;
