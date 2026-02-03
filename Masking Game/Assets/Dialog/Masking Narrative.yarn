@@ -39,7 +39,9 @@ Narrator: She lets out a sigh, and puts on a fake smile.
 Sulmira: “We will be more than happy to have dinner with everyone this year!”
 
 <<swapCharacter CharacterManager Narrator>>
-Narrator: You feel bad for letting her down. You see your daughter with green ribbons on her little thorns and smile.
+Narrator: You feel bad for letting her down. 
+<<swapCharacter CharacterManager Astelle>> 
+Narrator: You see your daughter with green ribbons on her little thorns and smile.
 <<jump Masking_Narrative_ScenarioB>>
 ===
 
@@ -66,6 +68,7 @@ Sulmira: “Maybe next year!”
 <<swapCharacter CharacterManager Narrator>>
 Narrator: She whispers, teasing you.
 Narrator:You feel bad for letting her down. 
+<<swapCharacter CharacterManager Astelle>> 
 Narrator: You see your daughter with green ribbons on her little thorns and smile.
 
 <<jump Masking_Narrative_ScenarioB>>
@@ -95,9 +98,9 @@ Narrator: The day has come!
 Narrator: The Nightmare’s gallop lit the road, signaling your mother’s arrival.
 Narrator: You could almost smell in the air that something uncommon was about to happen.  
 Narrator: Sulmira kisses you good luck and you open the door...
-<<swapCharacter CharacterManager Mum>>
 Narrator: Only to see your mom hugging a figure that reminded you of someone...
 
+<<swapCharacter CharacterManager Mum>>
 Mom: “You remember Lorien?! I was thinking about what gift I should bring you. And then you know ha ha ha...” 
 
 <<swapCharacter CharacterManager Narrator>>
@@ -188,6 +191,7 @@ position: -119,1132
 <<swapCharacter CharacterManager Narrator>>
 Narrator: While setting the table, your wife asks for help. After a brief pause of surprise, everyone joins in. 
 Narrator: The table is ready, and you all sit on carved wooden chairs rising from the ground.
+<<swapCharacter CharacterManager Astelle>> 
 Narrator: At that moment, your daughter throws her flip-flop at the bookcase with full force and laughs
 Narrator: She keeps throwing things at it, pretending it’s an owlbear.
 Narrator: It’s starting to get annoying.
@@ -208,7 +212,10 @@ position: -350,1361
 ---
 <<set $greenCount to $greenCount + 1>>
 <<swapCharacter CharacterManager Narrator>>
-Narrator: You stay silent. Your daughter looks at you, confused for a moment, then shrugs and sits down.
+Narrator: You stay silent. 
+<<swapCharacter CharacterManager Astelle>> 
+Narrator: Your daughter looks at you, confused for a moment, then shrugs and sits down.
+<<swapCharacter CharacterManager Narrator>> 
 Narrator: The room goes quiet.
 
 <<jump Masking_Narrative_ScenarioD>>
@@ -219,8 +226,9 @@ title: Masking_Narrative_ScenarioC_Responce1
 position: -75,1345
 ---
 <<set $redCount to $redCount + 1>>
-<<swapCharacter CharacterManager Narrator>>
+<<swapCharacter CharacterManager Astelle>> 
 Narrator: Encouraged, she throws another object at the bookcase and laughs even louder, eyes fixed on you.
+<<swapCharacter CharacterManager Narrator>>
 Narrator: No one intervenes. The behavior continues, and the irritation in the room grows heavier with each throw.
 
 <<jump Masking_Narrative_ScenarioD>>
@@ -231,8 +239,9 @@ title: Masking_Narrative_ScenarioC_Responce2
 position: 206,1357
 ---
 <<set $greenCount to $greenCount + 1>>
-<<swapCharacter CharacterManager Narrator>>
+<<swapCharacter CharacterManager Astelle>> 
 Narrator: She pauses, looks at the bookcase one last time, and lowers her hand. She doesn’t look sad, just a little disappointed.
+<<swapCharacter CharacterManager Narrator>>
 Narrator: The room goes quiet.
 
 <<jump Masking_Narrative_ScenarioD>>
@@ -362,9 +371,10 @@ position: -26,2526
 ---
 <<twister_end FingerTwister>>
 <<swapBG BGManager 4>>
-<<swapCharacter CharacterManager Narrator>>
+<<swapCharacter CharacterManager Astelle>> 
 Narrator: Your mother asks your daughter to smile. She does.
 Narrator: Your mother asks her to move her cute, flame-y legs and bring her scarf. She does.
+<<swapCharacter CharacterManager Narrator>>
 Narrator: After a while, silence.
 Narrator: Everyone finally leaves. You say goodbye to each of them.
 Narrator: Quiet again. Shhh.
@@ -381,6 +391,7 @@ Narrator: You look at each other, mask to mask.
 
     <<swapBG BGManager 5>>
     <<hideCharacter CharacterManager>>
+    <<hide_Mask Mask>>
     <<music DialogueSystem GoodEnd>>
     Nacym: [i]I imagined myself from a distance,[/i]
     Nacym: [i]balancing masks instead of a face.[/i]
@@ -389,7 +400,7 @@ Narrator: You look at each other, mask to mask.
     Nacym:[i]wherever the masks demanded.[/i]
     Nacym:[i]I searched the others’ eyes,[/i]
     Nacym:[i]adjusting my words to stay upright.[/i]
-    Nacym:[i]The farther I went,[/i]
+    Nacym:[i]The further I went,[/i]
     Nacym:[i] the brighter the masks became,[/i]
     Nacym:[i] the weaker my legs felt.[/i]
     Nacym:[i]They kept pulling me forward[/i]
@@ -401,6 +412,7 @@ Narrator: You look at each other, mask to mask.
     <<swapCharacter CharacterManager Narrator>>
     <<playCry DialogueSystem>>
     Narrator: Tears burst into your eyes. 
+    <<swapCharacter CharacterManager Astelle>> 
     Narrator: Your daughter freezes more and sinks in doubt about what happened. 
     Narrator: Some seconds pass. Your wife comes to you and hugs you. 
     Narrator: Your daughter slowly comes and touches your horns. You laugh in between tears.
@@ -419,6 +431,7 @@ Narrator: You look at each other, mask to mask.
     <<swapBG BGManager 6>>
     <<hideCharacter CharacterManager>>
     <<music DialogueSystem GoodEnd>>
+    <<hide_Mask Mask>>
     Nacym:[i]I wasn’t ready for this.[/i]
     Nacym:[i]I went out for a walk.[/i]
     Nacym:[i]I imagined myself from a distance,[/i]
@@ -428,7 +441,7 @@ Narrator: You look at each other, mask to mask.
     Nacym:[i]wherever the broken masks demanded.[/i]
     Nacym:[i]I searched the others’ eyes,[/i]
     Nacym:[i]adjusting my words to stay upright.[/i]
-    Nacym:[i]The farther I went,[/i]
+    Nacym:[i]The further I went,[/i]
     Nacym:[i]the brighter the broken masks became,[/i]
     Nacym:[i]the weaker my legs felt.[/i]
     Nacym:[i]They kept pulling me forward[/i]

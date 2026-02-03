@@ -53,6 +53,12 @@ public class Mask : MonoBehaviour
         }
     }
 
+    [YarnCommand("hide_Mask")]
+    public void HideMask()
+    {
+        if (maskImage != null) { maskImage.enabled = false; }
+    }
+
     public void LoseMaskHealth(int maskHealthLoss)
     {
         if (_gameEnded)
